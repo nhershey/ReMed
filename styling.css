@@ -1,0 +1,94 @@
+body {
+	width: 100%;
+	text-align: center;
+}
+#background {
+	position: relative;
+	margin-left: auto;
+    margin-right: auto;
+    width:90%;
+     
+    text-align: center;
+}
+.btn {
+	border-radius: 2px;
+	background: #CD5030; 
+	color: #FFFFFF;
+	position: absolute;
+	font-family: Avenir-book;
+}
+.btn:hover{
+	cursor: pointer;
+	box-shadow:inset 0px 0px 0px 2px #CD5030;
+	color: #CD5030;
+	background: #FFF; 
+}
+#btnLogin {
+	width: 109px;
+	height: 36px;
+	right: 131px;
+	top: 52px;
+	font-size: 15px;
+	letter-spacing: 2.5px;
+	line-height: 37px;
+	
+	/*width: 7%;
+	height: 4%;
+	right: 9%;
+	top: 6%;*/
+}
+#btnVideo {
+	width: 152px;
+	height: 44px;
+	left: 574px;
+	top: 576px;
+	font-size: 19px;
+	letter-spacing: 3px;
+	line-height: 48px;
+	box-shadow: inset 0px 0px 0px 2px #CD5030;
+	background: #FFF;
+	color: #CD5030;
+}
+#btnVideo:hover{
+	cursor: pointer;
+	border-radius: 2px;
+	background: #CD5030; 
+	color: #FFFFFF;
+}
+#btnSignUp {
+	width: 152px;
+	height: 44px;
+	left: 771px;
+	top: 576px;
+	font-size: 19px;
+	letter-spacing: 3px;
+	line-height: 48px;
+}
+.txt {
+	position: absolute;
+	background: #FFFFFF;
+	border: 1px solid #C9B9B9;
+	border-radius: 2px;
+	font-family: Avenir-Book;
+	font-size: 19px;
+	line-height: 27px;
+}
+#txtPassword {
+	width: 154;
+	height: 36px;
+	right: 258px;
+	top: 52px;
+}
+#txtEmail {
+	width: 154;
+	height: 36px;
+	right: 427px;
+	top: 52px;
+}
+#logo {
+	position: absolute;
+	width: 150px;
+	left: 30px;
+	right: 450px;
+	top: 45px;
+}
