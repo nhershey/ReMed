@@ -1,5 +1,5 @@
 body {
-	width: 100%;
+	width: 98%;
 	text-align: center;
 }
 #background {
@@ -15,7 +15,7 @@ body {
 	background: #CD5030; 
 	color: #FFFFFF;
 	position: absolute;
-	font-family: Avenir-book;
+	font-family: Avenir-book;/*Avenir-book*/
 }
 .btn:hover{
 	cursor: pointer;
@@ -24,13 +24,13 @@ body {
 	background: #FFF; 
 }
 #btnLogin {
-	width: 109px;
-	height: 36px;
-	right: 131px;
-	top: 52px;
-	font-size: 15px;
+	width: 7%; /*width: 109px;*/
+	height: 4.2%; /*height: 36px;*/
+	right: 9.5%; /*131px*/
+	top: 6.5%; /*top: 52px;*/
+	font-size: 2vmin; /*font-size: 15px*/
 	letter-spacing: 2.5px;
-	line-height: 37px;
+	line-height: 4.5vmin; /*line-height: 37px*/
 	
 	/*width: 7%;
 	height: 4%;
@@ -38,13 +38,13 @@ body {
 	top: 6%;*/
 }
 #btnVideo {
-	width: 152px;
-	height: 44px;
-	left: 574px;
-	top: 576px;
-	font-size: 19px;
+	width: 11%; /*width: 152px;*/
+	height: 5.8%; /*height: 44px;*/
+	left: 38%; /*left: 574px;*/
+	top: 70%; /*top: 576px;*/
+	font-size: 2.5vmin; /*font-size: 19px;*/
 	letter-spacing: 3px;
-	line-height: 48px;
+	line-height: 6vmin; /*line-height: 48px;*/
 	box-shadow: inset 0px 0px 0px 2px #CD5030;
 	background: #FFF;
 	color: #CD5030;
@@ -56,34 +56,35 @@ body {
 	color: #FFFFFF;
 }
 #btnSignUp {
-	width: 152px;
-	height: 44px;
-	left: 771px;
-	top: 576px;
-	font-size: 19px;
+	width: 11%; /*width: 152px;*/
+	height: 5.8%; /*height: 44px;*/
+	left: 53%; /*top: 576px;*/
+	top: 70%; /*top: 576px;*/
+	font-size: 2.5vmin; /*font-size: 19px;*/
 	letter-spacing: 3px;
-	line-height: 48px;
+	line-height: 6vmin; /*line-height: 48px;*/
 }
 .txt {
 	position: absolute;
 	background: #FFFFFF;
 	border: 1px solid #C9B9B9;
 	border-radius: 2px;
-	font-family: Avenir-Book;
-	font-size: 19px;
-	line-height: 27px;
+	font-family: Avenir-book;/*Avenir-book*/
+	padding: 1vmin;
+	font-size: 2.2vmin; /*font-size: 19px;*/
+	/*line-height: 4.4vmin; /*line-height: 27px;*/
 }
 #txtPassword {
-	width: 154;
-	height: 36px;
-	right: 258px;
-	top: 52px;
+	width: 10.5%; /*width: 154;*/
+	height: 4.2%; /*height: 36px;*/
+	right: 18%; /*258px*/
+	top: 6.5%; /*top: 52px;*/
 }
 #txtEmail {
-	width: 154;
-	height: 36px;
-	right: 427px;
-	top: 52px;
+	width: 10.5%; /*width: 154;*/
+	height: 4.2%; /*height: 36px;*/
+	right: 29.5%; /*right: 427px;*/
+	top: 6.5%; /*top: 52px;*/
 }
 #logo {
 	position: absolute;
