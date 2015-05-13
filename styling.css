@@ -16,11 +16,11 @@ body {
 	left: -80px;
 }
 .btn {
-	border-radius: 2px;
+	border-radius: 0px;
 	background: #CD5030; 
 	color: #FFFFFF;
 	position: absolute;
-	font-family: Avenir-book;/*Avenir-book*/
+	font-family: Avenir-book;
 }
 
 #btnLogin {
@@ -31,11 +31,6 @@ body {
 	font-size: 15px;
 	letter-spacing: 2.5px;
 	line-height: 37px;
-	
-	/*width: 7%;
-	height: 4%;
-	right: 9%;
-	top: 6%;*/
 }
 .btn:hover{
 	cursor: pointer;
@@ -57,7 +52,6 @@ body {
 }
 #btnVideo:hover {
 	cursor: pointer;
-	border-radius: 2px;
 	background: #CD5030; 
 	color: #FFFFFF;
 }
@@ -74,19 +68,18 @@ body {
 	position: absolute;
 	background: #FFFFFF;
 	border: 1px solid #C9B9B9;
-	border-radius: 2px;
-	font-family: Avenir-book;/*Avenir-book*/
-	/*padding: 1vmin;*/
+	border-radius: 0px;
+	font-family: Avenir-book;
 	font-size: 19px;
 	padding: 10px;
 }
-#txtPassword {
+#txtEmail {
 	width: 154px;
 	height: 36px;
 	right: 285px;
 	top: 52px;
 }
-#txtEmail {
+#txtPassword {
 	width: 154px;
 	height: 36px;
 	right: 120px;
