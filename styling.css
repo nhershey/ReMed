@@ -109,7 +109,6 @@ body {
 .header {
 	position: absolute;
 	width: 100%;
-	text-align: center;
 }
 #header1 {
 	font-family: Avenir-black;
@@ -128,4 +127,30 @@ body {
 	top: 436px;
 	color: #000;
 	font-size: 20px;
+}
+#howto {
+	font-family: Avenir-black;
+	top: 1000px;
+	color: #CD5030;
+	font-size: 36px;
+}
+#steps {
+	text-align: left;
+	font-family: Avenir-book;
+	top: 1100px;
+	color: #000;
+	left: 200px;
+	font-size: 24px;
+}
+#icons {
+	position: absolute;
+	text-align: left;
+	top: 1068px;
+	left: 723px;
+}
+#quote {
+	font-family: Avenir-book;
+	top: 1435px;
+	color: #D6D6D6;
+	font-size: 18px;
 }
