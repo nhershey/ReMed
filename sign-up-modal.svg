@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="538px" height="434px" viewBox="0 0 538 434" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Email" sketch:type="MSLayerGroup" transform="translate(61.000000, 121.000000)">
+            <rect id="Rectangle-3" stroke="#C9B9B9" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="414.116806" height="48"></rect>
+            <text id="---Email" sketch:type="MSTextLayer" font-family="Helvetica" font-size="26.2640337" font-weight="260" fill="#999999">
+                <tspan x="0" y="34">   Email</tspan>
+            </text>
+        </g>
+        <g id="Password" sketch:type="MSLayerGroup" transform="translate(62.000000, 193.000000)">
+            <rect id="Rectangle-3-Copy" stroke="#C9B9B9" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0.224536869" y="0" width="412.530858" height="48"></rect>
+            <text id="---Password" sketch:type="MSTextLayer" font-family="Helvetica" font-size="24" font-weight="260" fill="#999999">
+                <tspan x="0.224536869" y="31.3904">   Password</tspan>
+            </text>
+        </g>
+        <g id="Password-Copy" sketch:type="MSLayerGroup" transform="translate(62.000000, 265.000000)">
+            <rect id="Rectangle-3-Copy" stroke="#C9B9B9" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0.224536869" y="0" width="412.530858" height="48"></rect>
+            <text id="---Repeat-Password" sketch:type="MSTextLayer" font-family="Helvetica" font-size="24" font-weight="260" fill="#999999">
+                <tspan x="0.224536869" y="31.3904">   Repeat Password</tspan>
+            </text>
+        </g>
+        <g id="Login" sketch:type="MSLayerGroup" transform="translate(192.000000, 339.000000)">
+            <rect id="Rectangle-3-Copy-3" fill="#CD5030" sketch:type="MSShapeGroup" x="0" y="0" width="153.502114" height="47.229769"></rect>
+            <text id="SIGN-UP" sketch:type="MSTextLayer" font-family="Avenir" font-size="19.4638005" font-weight="normal" sketch:alignment="middle" letter-spacing="4.5" fill="#FFFFFF">
+                <tspan x="24.5418147" y="31.4648312">SIGN UP</tspan>
+            </text>
+        </g>
+        <text id="Welcome!" sketch:type="MSTextLayer" font-family="Avenir" font-size="36" font-weight="686" fill="#000000">
+            <tspan x="182" y="84">Welcome!</tspan>
+        </text>
+    </g>
+</svg>
