@@ -193,6 +193,12 @@
             <tspan x="53.45" y="103">"Don't forget to take your </tspan>
             <tspan x="107.93" y="127">medication!"</tspan>
         </text>
+        <text id="8:45am" sketch:type="MSTextLayer" font-family="Helvetica" font-size="20" font-weight="260" sketch:alignment="middle" fill="#000000">
+            <tspan x="69.275" y="180">8:45am</tspan>
+        </text>
+        <text id="9:00pm" sketch:type="MSTextLayer" font-family="Helvetica" font-size="20" font-weight="260" sketch:alignment="middle" fill="#000000">
+            <tspan x="170.725" y="180">9:00pm</tspan>
+        </text>
         <g id="Group" sketch:type="MSLayerGroup" transform="translate(353.000000, 19.000000)">
             <g id="Rectangle-17-+-April-2012-+-Path-2-+-Path-2-Copy-+-Path-2-+-Path-2-Copy-2-Copy-Copy" transform="translate(0.000000, 41.000000)" fill="#FCFCFC" sketch:type="MSShapeGroup">
                 <g id="Rectangle-17-+-April-2012">
