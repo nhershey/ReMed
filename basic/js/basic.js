@@ -13,7 +13,7 @@ jQuery(function ($) {
 	//$('#basic-modal-content').modal();
 
 	// Load dialog on click
-	$('.basic').click(function (e) {
+	$('#basic-modal .basic').click(function (e) {
 		$('#basic-modal-content').modal();
 
 		return false;
