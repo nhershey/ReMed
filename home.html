@@ -2,6 +2,17 @@
 <head>
 <link rel="stylesheet" type="text/css" href="styling.css">
 <link rel="stylesheet" type="text/css" href="fonts.css">
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+
+$(".row").click(function(){
+	    $("#dropdown").slideToggle();
+	});
+$( ".row" ).hover(function() {
+  alert('in');
+});
+</script>
 </head>
 
 <body>
@@ -20,11 +31,13 @@
 				<div class="cell"> Adherence </div>
 			</div>
 			<div class="row color1">
-				<div class="cell"> First Name </div>
-				<div class="cell"> Last Name </div>
-				<div class="cell"> Cell Phone </div>
-				<div class="cell"> Adherence </div>
+				<div class="cell"> Nicolas </div>
+				<div class="cell"> Hershey </div>
+				<div class="cell"> 1 (513)-545-9227 </div>
+				<div class="cell"> 85% </div>
 			</div> 
+			<img src="open-down.svg" id="dropdown"/>
+			<script type="text/javascript">$("#dropdown").hide();</script>
 			<script>
 				for (var i = 0; i < 7; i++) { //<br/> <div style="width: 100%;align:center;"> H HI hI </div> \
 					document.write('<div class="row color2"> \

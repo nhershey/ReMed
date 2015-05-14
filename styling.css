@@ -175,9 +175,10 @@ body {
 	font-family: Helvetica-light;
 	text-align: left;*/
 	padding-top: 7px;
-font-family: Helvetica-light;
-text-align: left;
-padding-bottom: 26px;
+	font-family: Helvetica-light;
+	text-align: left;
+	padding-bottom: 26px;
+	cursor: pointer;
 }
 #headerrow {
 	background-color: #CD5030;
@@ -205,5 +206,7 @@ padding-bottom: 26px;
 	font-size: 20px;
 	color:black;
 }
-
+#dropdown {
+	width: 100%;
+}
 
