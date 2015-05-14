@@ -6,9 +6,39 @@
 
 <body>
 	<div id="centered">
-		<div class="btn" id="btnVideo"> VIDEO </div>
+		<!--<img id="background" src="Home Background.svg" />-->
+		<img id="logo" src="img/logo.svg" />
+		<div class="btn" id="btnAddPatient"> ADD PATIENT </div>
+		<a href="index.html"> <div id="logout"> Logout </div></a>
+		<input type="text" class="txt" id="txtSearch" placeholder="Search by Name">
+
+		<div id="tblPatients">
+			<div class="row" id="headerrow">
+				<div class="cell"> First Name </div>
+				<div class="cell"> Last Name </div>
+				<div class="cell"> Cell Phone </div>
+				<div class="cell"> Adherence </div>
+			</div>
+			<script>
+				for (var i = 0; i < 7; i++) {
+					document.write('<div class="row color1"> \
+						<div class="cell"> First Name </div> \
+						<div class="cell"> Last Name </div>  \
+						<div class="cell"> Cell Phone </div> \
+						<div class="cell"> Adherence </div>  \
+					</div> \
+					<div class="row color2"> \
+						<div class="cell"> First Name </div> \
+						<div class="cell"> Last Name </div>  \
+						<div class="cell"> Cell Phone </div> \
+						<div class="cell"> Adherence </div> \
+					</div>');
+				}
+			</script>
+		</div>
+		<!--<div class="btn" id="btnVideo"> VIDEO </div>
 		<div class="btn" id="btnSignUp"> SIGN UP </div>
-		<a href="home.html"><div class="btn" id="btnLogin"> LOGIN </div></a>
+		<div class="btn" id="btnLogin"> LOGIN </div>
 		<input type="text" class="txt" id="txtEmail" placeholder="Email">
 		<input type="password" class="txt" id="txtPassword" placeholder="Password">
 		<img id="logo" src="img/logo.svg" />
@@ -39,7 +69,7 @@
 			"Almost all my patients that use ReMed have better outcomes, and <br/>
 			I can use the results to make more informed decisions."<br/>
 			- Hypertension specialist
-		</div>
+		</div>-->
 
 	</div>
 
@@ -47,4 +77,3 @@
 </body>
 
 </html>
-

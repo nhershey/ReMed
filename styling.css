@@ -1,5 +1,5 @@
 body {
-	width: 98%;
+	width: 100%;
 	text-align: center;
 }
 #centered {
@@ -22,7 +22,12 @@ body {
 	position: absolute;
 	font-family: Avenir-book;
 }
-
+.btn:hover{
+	cursor: pointer;
+	box-shadow:inset 0px 0px 0px 2px #CD5030;
+	color: #CD5030;
+	background: #FFF; 
+}
 #btnLogin {
 	width: 109px;
 	height: 36px;
@@ -32,11 +37,15 @@ body {
 	letter-spacing: 2.5px;
 	line-height: 37px;
 }
-.btn:hover{
-	cursor: pointer;
-	box-shadow:inset 0px 0px 0px 2px #CD5030;
-	color: #CD5030;
-	background: #FFF; 
+#btnAddPatient {
+	width: 190px;
+	height: 44px;
+	right: 0px;
+	top: 154px;
+	font-size: 19px;
+	letter-spacing: 3px;
+	line-height: 48px;
+
 }
 #btnVideo {
 	width: 152px;
@@ -85,12 +94,18 @@ body {
 	right: 120px;
 	top: 52px;
 }
+#txtSearch {
+	width: 456px;
+	height: 44px;
+	left: 304px;
+	top: 154px;
+}
 #logo {
 	position: absolute;
 	width: 233px;
-	left: 13px;
-	right: 450px;
-	top: 21px;
+	/*left: 50px;*/
+	left: 0px;
+	top: 30px;
 }
 #stethoscope {
 	position: absolute;
@@ -143,8 +158,46 @@ body {
 	left: 723px;
 }
 #quote {
-	font-family: Avenir-book; 
+	font-family: Avenir-book;
 	top: 1435px;
-	color: #D6D6D6;
+	color: #CCC;
 	font-size: 18px;
 }
+#tblPatients {
+	position: absolute;
+	top: 225px;
+	width: 100%;
+}
+.row {
+	height: 18px;
+	padding: 8px;
+	font-family: Helvetica-light;
+	text-align: left;
+}
+#headerrow {
+	background-color: #CD5030;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+.color1 {
+	background-color: #E2E5E9;
+}
+.color2 {
+	background-color: #FEE8C3;
+}
+.cell {
+	width:240px;
+	float:left;
+	text-align: center;
+}
+#logout {
+	position: absolute;
+	right: 0px;
+	top: 135px;
+	top: 40px;
+	font-family: Avenir-black;
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+
