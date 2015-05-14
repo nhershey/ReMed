@@ -97,7 +97,8 @@ body {
 #txtSearch {
 	width: 456px;
 	height: 44px;
-	left: 304px;
+	/*left: 304px;*/
+	left: 0px;
 	top: 154px;
 }
 #logo {
@@ -169,10 +170,14 @@ body {
 	width: 100%;
 }
 .row {
-	height: 18px;
+	/*height: 18px;
 	padding: 8px;
 	font-family: Helvetica-light;
-	text-align: left;
+	text-align: left;*/
+	padding-top: 7px;
+font-family: Helvetica-light;
+text-align: left;
+padding-bottom: 26px;
 }
 #headerrow {
 	background-color: #CD5030;
