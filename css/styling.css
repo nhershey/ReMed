@@ -210,3 +210,43 @@ body {
 	width: 100%;
 }
 
+/*Register Modal*/
+#txtEmailRegister {
+	width: 415px;
+	height: 49px;
+	left: 80px;
+	top: 141px;
+	font-size: 21px;
+}
+#txtPasswordRegister {
+	width: 415px;
+	height: 49px;
+	left: 80px;
+	top: 213px;
+	font-size: 21px;
+}
+#txtPassword2Register {
+	width: 415px;
+	height: 49px;
+	left: 80px;
+	top: 285px;
+	font-size: 21px;
+}
+#btnRegister {
+	width: 133px;
+	height: 27px;
+	left: 212px;
+	top: 359px;
+	font-size: 21px;
+	padding: 10px;
+	letter-spacing: 2.5px;
+}
+#welcome {
+	position:absolute;
+	font-family: Avenir-black;
+	top: 41px;
+	color: #000;
+	text-align: center;
+	font-size: 36px;
+	left: 204px;
+}
