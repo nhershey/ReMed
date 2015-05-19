@@ -21,12 +21,22 @@ body {
 	color: #FFFFFF;
 	position: absolute;
 	font-family: Avenir-book;
+	cursor: pointer;
 }
 .btn:hover{
-	cursor: pointer;
 	box-shadow:inset 0px 0px 0px 2px #CD5030;
 	color: #CD5030;
 	background: #FFF; 
+}
+.btnReverse{
+	box-shadow: inset 0px 0px 0px 2px #CD5030;
+	background: #FFF;
+	color: #CD5030;
+}
+.btnReverse:hover{
+	cursor: pointer;
+	background: #CD5030; 
+	color: #FFFFFF;
 }
 #btnLogin {
 	width: 109px;
@@ -55,14 +65,7 @@ body {
 	font-size: 19px;
 	letter-spacing: 3px;
 	line-height: 48px;
-	box-shadow: inset 0px 0px 0px 2px #CD5030;
-	background: #FFF;
-	color: #CD5030;
-}
-#btnVideo:hover {
-	cursor: pointer;
-	background: #CD5030; 
-	color: #FFFFFF;
+	
 }
 #btnSignUp {
 	width: 152px;
@@ -211,36 +214,6 @@ body {
 }
 
 /*Register Modal*/
-#txtEmailRegister {
-	width: 415px;
-	height: 49px;
-	left: 80px;
-	top: 141px;
-	font-size: 21px;
-}
-#txtPasswordRegister {
-	width: 415px;
-	height: 49px;
-	left: 80px;
-	top: 213px;
-	font-size: 21px;
-}
-#txtPassword2Register {
-	width: 415px;
-	height: 49px;
-	left: 80px;
-	top: 285px;
-	font-size: 21px;
-}
-#btnRegister {
-	width: 133px;
-	height: 27px;
-	left: 212px;
-	top: 359px;
-	font-size: 21px;
-	padding: 10px;
-	letter-spacing: 2.5px;
-}
 #welcome {
 	position:absolute;
 	font-family: Avenir-black;
@@ -250,3 +223,72 @@ body {
 	font-size: 36px;
 	left: 204px;
 }
+.register {
+	font-size: 19px;
+	width: 397px;
+	left: 90px;
+	height: 40px;
+}
+#txtRegisterFirstName {
+	width: 193px;
+	top: 110px;
+}
+#txtRegisterLastName {
+	width: 193px;
+	left: 294px;
+	top: 110px;
+}
+#txtRegisterEmail {
+	top: 170px;
+}
+#txtRegisterPassword {
+	top: 230px;
+}
+#txtRegisterPassword2 {
+	top: 290px;
+}
+#btnCreateGroup {
+	width: 193px;
+	top: 350px;
+	line-height: 40px;
+}
+#btnJoinGroup{
+	width: 193px;
+	top: 350px;
+	line-height: 40px;
+	left: 294px;
+}
+#cntJoinGroup{
+	position: absolute;
+ 	top: 390px;
+	height: 20px;
+	width: 20px;
+	background: #CD5030;
+	left: 177px; 
+}
+#btnCreateGroupdrop{
+	display:none;
+}
+#dropGroup{
+	top: 410px;
+	height: 80px;
+	background: #CD5030; 
+	position: absolute;
+}
+#txtJoinGroup {
+	top:20px;
+	left:20px;
+	width: 357px;
+}
+
+#btnRegister {
+	width: 133px;
+	height: 27px;
+	left: 212px;
+	top: 410px;
+	font-size: 21px;
+	padding: 10px;
+	letter-spacing: 2.5px;
+}
+
+

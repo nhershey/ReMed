@@ -10,12 +10,14 @@
 <script type='text/javascript' src='js/jquery.simplemodal.js'></script>
 <script type='text/javascript' src='js/basic.js'></script>
 
+
+
 </head>
 
 <body>
 	<div id="centered">
-		<div class="btn" id="btnVideo"> VIDEO </div>
-		<div class="btn basic" id="btnSignUp"> SIGN UP </div>
+		<div class="btn btnReverse" id="btnVideo"> VIDEO </div>
+		<div class="btn basic"  id="btnSignUp"> SIGN UP </div>
 
 		<a href="home.html"><div class="btn" id="btnLogin"> LOGIN </div></a>
 		<input type="text" class="txt" id="txtEmail" placeholder="Email">
@@ -54,12 +56,36 @@
 	<div id="modal-content">
 		<!--<img src="svg_cheats/sign-up-modal-supported.svg">-->
 		<div id="welcome">Welcome!</div>
-		<input type="text" class="txt" id="txtEmailRegister" placeholder="Email">
-		<input type="password" class="txt" id="txtPasswordRegister" placeholder="Password">
-		<input type="password" class="txt" id="txtPassword2Register" placeholder="Repeat Password">
-		<div class="btn basic" id="btnRegister"> REGISTER </div>
+		<input type="text" class="txt register" id="txtRegisterFirstName" placeholder="First Name">
+		<input type="text" class="txt register" id="txtRegisterLastName" placeholder="Last Name">
+		<input type="text" class="txt register" id="txtRegisterEmail" placeholder="Email">
+		<input type="password" class="txt register" id="txtRegisterPassword" placeholder="Password">
+		<input type="password" class="txt register" id="txtRegisterPassword2" placeholder="Repeat Password">
+		<div class="btn register btnReverse slide" id="btnCreateGroup"> Create a group </div>
+		<div class="btn register btnReverse" id="btnJoinGroup"> Join a group </div>
+		<div id="btnCreateGroupdrop">
+			<div id="cntJoinGroup"></div>
+			<div class="register" id="dropGroup">
+				<input type="text" class="txt register" id="txtJoinGroup" placeholder="Name of Group">
+			</div>
+		</div>
+		<div id="btnCreateGroupdrop">
+			<div id="cntCreateGroup"></div>
+			<div class="register" id="dropGroup">
+				<input type="text" class="txt register" id="txtJoinGroup" placeholder="Name of Group">
+			</div>
+		</div>
+		<!--<div class="btn basic" id="btnRegister"> REGISTER </div>-->
 	</div>
 
 </body>
+<script type="text/javascript">
+	/*$(".slide").click(function(){
+		$("#"+$(this).attr("id")+"drop").slideToggle();
+	});*/
+	$("#btnCreateGroup").click(function(){
+		$("#btnCreateGroupdrop").slideToggle();
+	});
+</script>
 
 </html>
