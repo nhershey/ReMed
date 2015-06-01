@@ -179,6 +179,7 @@ body {
 	position: absolute;
 	top: 225px;
 	width: 100%;
+	font-family:Helvetica-light;
 }
 .row {
 	/*height: 18px;
@@ -186,7 +187,6 @@ body {
 	font-family: Helvetica-light;
 	text-align: left;*/
 	padding-top: 7px;
-	font-family: Helvetica-light;
 	text-align: left;
 	padding-bottom: 26px;
 	cursor: pointer;
@@ -315,6 +315,50 @@ body {
 	font-size: 19px;
 	letter-spacing: 3px;
 	line-height: 48px;	
+}
+#titleName {
+	text-align: center;
+  position: relative;
+  top: 40px;
+  left: 20px;
+  font-family: Avenir-black;
+  font-size: 24px;
+}
+#titleCode {
+	text-align: center;
+  	font-family: Avenir-book;
+  	top: 44px;
+  	position: relative;
+}
+.tableDropCol {
+	width: 30%;
+	height: 90%;
+	float: left;
+	padding:15px;
+}
+.tableDrop {
+	height: 230px;
+}
+.lblNoteTitle {
+  height: 38px;
+  width: 275px;
+  background: beige;
+  line-height: 38px;
+}
+.lblNoteText {
+  background: white;
+  width: 235px;
+  height: 110px;
+  padding: 20px;
+  text-align: left;
+}
+.reminderText {
+	position: relative;
+	top: 40px;
+}
+.reminderTimes {
+	position: relative;
+	top: 80px;
 }
 /*#cntCreateGroup{
 	position: absolute;
