@@ -51,9 +51,9 @@ Calendar.prototype.generateHTML = function(){
   // do the header
   var monthName = cal_months_labels[this.month]
   var html = '<table class="calendar-table">';
-  html += '<tr><td colspan="7" class="calendar-month">';
+  html += '<tr><td class="calendar-arrow" onclick="changeMonth(-1)"><</td><td colspan="5" class="calendar-month">';
   html +=  monthName + "&nbsp;" + this.year;
-  html += '</td></tr>';
+  html += '</td><td class="calendar-arrow" onclick="changeMonth(1)">></td></tr>';
   /*html += '<tr class="calendar-header">';
   for(var i = 0; i <= 6; i++ ){
     html += '<td class="calendar-header-day">';
@@ -155,12 +155,31 @@ Calendar.prototype.getHTML = function() {
 						var today = new Date();
 						var year = today.getFullYear();
 						var month = today.getMonth();
-						alert(year);
-						alert(month);
-						var cal = new Calendar(8,2009);
-						cal.generateHTML();
-						document.write(cal.getHTML());
 					</script>
+					<div id="calendar-div"> 
+						<script>
+							var cal = new Calendar();
+							cal.generateHTML();
+							document.write(cal.getHTML());
+						</script>
+					</div>
+						<script>
+							function changeMonth(delta) {
+								month += delta;
+								if (month < 0) {
+									year -= 1;
+									month = 12;
+								}
+								if (month > 11) {
+									year += 1;
+									month = 0;
+								}
+								$("#calendar-div").empty();
+								var cal = new Calendar(month, year);
+								cal.generateHTML();
+								$("#calendar-div").html(cal.getHTML());
+							}
+						</script>
 				</div>
 
 			</div>

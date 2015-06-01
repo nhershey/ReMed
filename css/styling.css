@@ -375,6 +375,10 @@ body {
 .calendar-table {
 	background: beige;
 }
+.calendar-arrow {
+	text-align: center;
+	cursor: pointer;
+}
 /*#cntCreateGroup{
 	position: absolute;
  	top: 390px;
