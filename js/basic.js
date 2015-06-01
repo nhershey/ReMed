@@ -16,7 +16,9 @@ jQuery(function ($) {
 	// Load dialog on click
 	$('.basic').click(function (e) {
 		$('#modal-content').modal();
-
+		if ($(this).attr('id') == "btnAddPatient") {
+			$("#simplemodal-container").css("height","360px");
+		}
 		return false;
 	});
 });

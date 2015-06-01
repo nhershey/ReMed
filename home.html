@@ -2,19 +2,37 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/styling.css">
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/basic.js'></script>
+<script type='text/javascript' src='js/jquery.maskedinput.js'></script>
 
 
-
-</script>
 </head>
 
+
 <body>
+
 	<div id="centered">
 		<!--<img id="background" src="Home Background.svg" />-->
 		<img id="logo" src="img/logo.svg" />
-		<div class="btn" id="btnAddPatient"> ADD PATIENT </div>
+		<div class="btn basic" id="btnAddPatient"> ADD PATIENT </div>
+
+		<div id="modal-content">
+			<!--<img src="svg_cheats/sign-up-modal-supported.svg">-->
+			<div id="welcome">Add a patient!</div>
+			<input type="text" class="txt register" id="txtRegisterFirstName" placeholder="First Name">
+			<input type="text" class="txt register" id="txtRegisterLastName" placeholder="Last Name">
+			<input type="text" class="txt register phone" id="txtCellphone" placeholder="Cellphone">
+			<div id="addDirections">Enter up to 3 reminder times per day, moving left to right.</div>
+			<input type="text" class="txt register reminder" id="txtRemind1" placeholder="0:00">
+			<input type="text" class="txt register reminder" id="txtRemind2" placeholder="0:00">
+			<input type="text" class="txt register reminder" id="txtRemind3" placeholder="0:00">
+			<div class="btn basic" id="btnSchedule"> SCHEDULE </div>
+		</div>
+
 		<a href="index.html"> <div id="logout"> Logout </div></a>
 		<input type="text" class="txt" id="txtSearch" placeholder="Search by Name">
 
@@ -63,5 +81,8 @@
 
 
 </body>
+<script>
+$(".phone").mask("(999) 999-9999");
 
+</script>
 </html>

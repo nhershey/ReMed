@@ -28,6 +28,14 @@ body {
 	color: #CD5030;
 	background: #FFF; 
 }
+.selected {
+	border-radius: 0px;
+	background: #CD5030; 
+	color: #FFFFFF;
+	position: absolute;
+	font-family: Avenir-book;
+	cursor: pointer;
+}
 .btnReverse{
 	box-shadow: inset 0px 0px 0px 2px #CD5030;
 	background: #FFF;
@@ -60,7 +68,7 @@ body {
 #btnVideo {
 	width: 152px;
 	height: 44px;
-	left: 335px;
+	left: 326px;
 	top: 540px;
 	font-size: 19px;
 	letter-spacing: 3px;
@@ -70,7 +78,7 @@ body {
 #btnSignUp {
 	width: 152px;
 	height: 44px;
-	left: 535px;
+	left: 524px;
 	top: 540px;
 	font-size: 19px;
 	letter-spacing: 3px;
@@ -149,7 +157,7 @@ body {
 #steps {
 	text-align: left;
 	font-family: Avenir-book;
-	top: 1100px;
+	top: 1071px;
 	color: #000;
 	left: 200px;
 	width: 500px;
@@ -215,13 +223,12 @@ body {
 
 /*Register Modal*/
 #welcome {
-	position:absolute;
+	position:relative;
 	font-family: Avenir-black;
-	top: 41px;
+	top: 25px;
 	color: #000;
 	text-align: center;
 	font-size: 36px;
-	left: 204px;
 }
 .register {
 	font-size: 19px;
@@ -237,6 +244,36 @@ body {
 	width: 193px;
 	left: 294px;
 	top: 110px;
+}
+#txtCellphone {
+	top: 170px;
+}
+#addDirections{
+	position:relative;
+	font-family: Avenir-book;
+	top: 160px;
+	color: #000;
+	text-align: center;
+	font-size: 14px;
+}
+.reminder {
+	top: 248px;
+	width:125px;
+}
+#txtRemind2 {
+	left: 226px;
+}
+#txtRemind3 {
+	left: 362px;
+}
+#btnSchedule {
+	width: 152px;
+	height: 44px;
+	left: 212px;
+	top: 308px;
+	font-size: 19px;
+	letter-spacing: 3px;
+	line-height: 48px;	
 }
 #txtRegisterEmail {
 	top: 170px;
@@ -258,7 +295,28 @@ body {
 	line-height: 40px;
 	left: 294px;
 }
-#cntJoinGroup{
+#txtGroup {
+	top: 410px;
+}
+#code {
+	position: absolute;
+	font-family: Avenir-book;
+	top: 450px;
+	color: #000;
+	text-align: center;
+	font-size: 17px;
+	left: 235px;
+}
+#btnRegister {
+	width: 152px;
+	height: 44px;
+	left: 212px;
+	top: 485px;
+	font-size: 19px;
+	letter-spacing: 3px;
+	line-height: 48px;	
+}
+/*#cntCreateGroup{
 	position: absolute;
  	top: 390px;
 	height: 20px;
@@ -266,7 +324,18 @@ body {
 	background: #CD5030;
 	left: 177px; 
 }
+#cntJoinGroup{
+	position: absolute;
+ 	top: 390px;
+	height: 20px;
+	width: 20px;
+	background: #CD5030;
+	left: 380px; 
+}
 #btnCreateGroupdrop{
+	display:none;
+}
+#btnJoinGroupdrop{
 	display:none;
 }
 #dropGroup{
@@ -278,17 +347,13 @@ body {
 #txtJoinGroup {
 	top:20px;
 	left:20px;
-	width: 357px;
+	width: 360px;
 }
+.txtDoGroup {
+	left: 20px;
+  	top: 20px;
+  	width: 360px;
+}*/
 
-#btnRegister {
-	width: 133px;
-	height: 27px;
-	left: 212px;
-	top: 410px;
-	font-size: 21px;
-	padding: 10px;
-	letter-spacing: 2.5px;
-}
 
 

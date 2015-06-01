@@ -19,9 +19,10 @@
 		<div class="btn btnReverse" id="btnVideo"> VIDEO </div>
 		<div class="btn basic"  id="btnSignUp"> SIGN UP </div>
 
-		<a href="home.html"><div class="btn" id="btnLogin"> LOGIN </div></a>
+		
 		<input type="text" class="txt" id="txtEmail" placeholder="Email">
 		<input type="password" class="txt" id="txtPassword" placeholder="Password">
+		<a href="home.html"><div class="btn" id="btnLogin"> LOGIN </div></a>
 		<img id="logo" src="img/logo.svg" />
 		<img id="stethoscope" src="img/stethoscope.svg" />
 		<div class="header" id="header1"> 
@@ -61,19 +62,24 @@
 		<input type="text" class="txt register" id="txtRegisterEmail" placeholder="Email">
 		<input type="password" class="txt register" id="txtRegisterPassword" placeholder="Password">
 		<input type="password" class="txt register" id="txtRegisterPassword2" placeholder="Repeat Password">
-		<div class="btn register btnReverse slide" id="btnCreateGroup"> Create a group </div>
+		<div class="btn register btnReverse" id="btnCreateGroup"> Create a group </div>
 		<div class="btn register btnReverse" id="btnJoinGroup"> Join a group </div>
-		<div id="btnCreateGroupdrop">
-			<div id="cntJoinGroup"></div>
-			<div class="register" id="dropGroup">
-				<input type="text" class="txt register" id="txtJoinGroup" placeholder="Name of Group">
-			</div>
-		</div>
-		<div id="btnCreateGroupdrop">
+		<!--<div id="btnCreateGroupdrop">
 			<div id="cntCreateGroup"></div>
 			<div class="register" id="dropGroup">
-				<input type="text" class="txt register" id="txtJoinGroup" placeholder="Name of Group">
+				<input type="text" class="txt register txtDoGroup" id="txtCreateGroup" placeholder="Name of Group">
 			</div>
+		</div>
+		<div id="btnJoinGroupdrop">
+			<div id="cntJoinGroup"></div>
+			<div class="register" id="dropGroup">
+				<input type="text" class="txt register txtDoGroup" id="txtJoinGroup" placeholder="Code for Group">
+			</div>
+		</div>-->
+		<div id="groupDrop" style="display:none">
+			<input type="text" class="txt register" id="txtGroup" placeholder=" ">
+			<div id="code"> a13bawliu23b </div>
+			<div class="btn basic" id="btnRegister"> REGISTER </div>
 		</div>
 		<!--<div class="btn basic" id="btnRegister"> REGISTER </div>-->
 	</div>
@@ -84,7 +90,22 @@
 		$("#"+$(this).attr("id")+"drop").slideToggle();
 	});*/
 	$("#btnCreateGroup").click(function(){
-		$("#btnCreateGroupdrop").slideToggle();
+		$("#btnCreateGroup").removeClass("btn btnReverse").addClass("selected");
+		$("#btnJoinGroup").removeClass("selected").addClass("btn btnReverse");
+		$("#groupDrop").show();
+		$("#txtGroup").attr("placeholder", "Create a group");
+		$("#simplemodal-container").css("height","530px");
+	});
+	$("#btnJoinGroup").click(function(){
+		$("#btnJoinGroup").removeClass("btn btnReverse").addClass("selected");
+		$("#btnCreateGroup").removeClass("selected").addClass("btn btnReverse");
+		$("#groupDrop").show();
+		$("#txtGroup").attr("placeholder", "Join a group");
+		$("#simplemodal-container").css("height","530px");
+		/*$("#btnJoinGroup").removeClass("btnReverse").addClass("btn");
+		$("#btnCreateGroup").removeClass("btn").addClass("btnReverse");
+		$("#btnCreateGroupdrop").hide();
+		$("#btnJoinGroupdrop").show();*/
 	});
 </script>
 
