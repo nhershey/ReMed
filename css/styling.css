@@ -250,29 +250,7 @@ body {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
-
-#txtRegisterFirstName {
-	width: 193px;
-	top: 110px;
-}
-#txtRegisterLastName {
-	width: 193px;
-	left: 294px;
-	top: 110px;
-}
-#txtCellphone {
-	top: 170px;
-}
-#addDirections{
-	position:relative;
-	font-family: Avenir-book;
-	top: 160px;
-	color: #000;
-	text-align: center;
-	font-size: 14px;
-}
-.reminder {
+.txtreminder {
 	width: 30%;
 }
 #txtRemind1 {
@@ -294,17 +272,7 @@ body {
 	letter-spacing: 4px;
 	line-height: 45px;	
 }
-#txtRegisterEmail {
-	top: 170px;
-}
-#txtRegisterPassword {
-	top: 230px;
-}
-#txtRegisterPassword2 {
-	top: 290px;
-}
 #btnCreateGroup {
-	/*top: 350px;*/
 	position: relative;
 	float:left;
 	left: 30px;
@@ -312,22 +280,13 @@ body {
 	line-height: 40px;
 }
 #btnJoinGroup{
-	/*top: 350px;*/
 	position: relative;
 	float:left;
 	left: 64px;
 	width: 193px;
 	line-height: 40px;
 }
-/*#txtGroup {
-	top: 410px;
-}*/
 #groupDynamic {
-	/*position: absolute;
-	font-family: Avenir-book;
-	top: 450px;
-	color: #000;
-	left: 235px;*/
 	text-align: center;
 	margin-top:5px;
 	font-size: 17px;
@@ -337,7 +296,6 @@ body {
 #groupDrop {
 	margin-top:70px;
 }
-
 #titleName {
 	text-align: center;
   position: relative;
@@ -378,9 +336,18 @@ body {
 	position: relative;
 	top: 40px;
 }
-.reminderTimes {
+.reminderTimesContainer {
 	position: relative;
-	top: 80px;
+	top: 65px;
+}
+.reminderTimes {
+	margin:10px;
+}
+.reminderTimesOpen{
+	width: 96px;
+  	font-size: 17px;
+  	font-family: Helvetica-Light;
+  	text-align: center;
 }
 .calendar-day {
 	  width: 34px;

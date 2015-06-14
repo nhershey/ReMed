@@ -122,23 +122,14 @@ Calendar.prototype.getHTML = function() {
 		<div class="formelement">
 			Reminder Times <br/>
 				<div style="width:100%;text-align:center">
-				  	<input type="text" class="formbox reminder" id="txtRemind1" placeholder="0:00">
-					<input type="text" class="formbox reminder" id="txtRemind2" placeholder="0:00">
-					<input type="text" class="formbox reminder" id="txtRemind3" placeholder="0:00">
+				  	<input type="text" class="formbox txtreminder" id="txtRemind1" placeholder="0:00">
+					<input type="text" class="formbox txtreminder" id="txtRemind2" placeholder="0:00">
+					<input type="text" class="formbox txtreminder" id="txtRemind3" placeholder="0:00">
 				</div>
 			</div>
 			<div style="width:100%;">
 			  	<div class="btn btnSubmitModal"> SCHEDULE </div>
 			</div>
-			<!--<div id="welcome">Add a patient!</div>
-			<input type="text" class="txt register" id="txtRegisterFirstName" placeholder="First Name">
-			<input type="text" class="txt register" id="txtRegisterLastName" placeholder="Last Name">
-			<input type="text" class="txt register phone" id="txtCellphone" placeholder="Cellphone">
-			<div id="addDirections">Enter up to 3 reminder times per day, moving left to right.</div>
-			<input type="text" class="txt register reminder" id="txtRemind1" placeholder="0:00">
-			<input type="text" class="txt register reminder" id="txtRemind2" placeholder="0:00">
-			<input type="text" class="txt register reminder" id="txtRemind3" placeholder="0:00">
-			<div class="btn basic" id="btnSchedule"> SCHEDULE </div>-->
 		</div>
 
 		<a href="index.html"> <div id="logout"> Logout </div></a>
@@ -160,9 +151,9 @@ Calendar.prototype.getHTML = function() {
 			<div id="row-1" class="tableDrop color1">
 				<div class="tableDropCol">
 					 <div class="reminderText"> "Don't forget to take your Medication!" </div>
-					<div class="reminderTimes"> 
-						<div> 9:00am </div>
-						<div> 7:40pm </div>					
+					<div class="reminderTimesContainer"> 
+						<div class="reminderTimes" id="0"> 9:00am </div>
+						<div class="reminderTimes" id="1"> 7:40pm </div>					
 					</div>
 				</div>
 				<div class="tableDropCol"> 
@@ -229,6 +220,23 @@ Calendar.prototype.getHTML = function() {
 				$(".row").click(function(){
 				   	$("#row"+$(this).attr('id')).slideToggle();
 				});
+				var opened = [false,false,false];
+				$(".reminderTimes").click(function(){
+					if (!opened[$(this).attr('id')]) {
+						opened[$(this).attr('id')] = true;
+						var time = $(this).html();
+						$(this).html("<input type='text' id='reminderTimesOpen"+$(this).attr('id')+"' class='reminderTimesOpen' value='"+time+"''>");
+					}	
+				});
+				$(".reminderTimes").on( "focusout", function(){
+					if (opened[$(this).attr('id')]) {
+						opened[$(this).attr('id')] = false;
+						var time = $("#reminderTimesOpen"+$(this).attr('id')).val();
+						$(this).html(time);
+					}	
+				});
+
+					
 			</script>
 		</div>
 
