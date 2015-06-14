@@ -222,20 +222,36 @@ body {
 }
 
 /*Register Modal*/
-#welcome {
-	position:relative;
+.mdlTitle {
 	font-family: Avenir-black;
-	top: 25px;
-	color: #000;
-	text-align: center;
 	font-size: 36px;
+	color: #000;
+	margin-bottom:15px;
 }
-.register {
+.formelement {
+	text-align: left;
+	font-family: Avenir-book;
+	margin-bottom:15px;
+	color: #000;
+}
+.formlefthalf {
+	width: 47%;
+	float:left;
+}
+.formrighthalf {
+	width:47%;
+	float:right;
+}
+.formbox {
 	font-size: 19px;
-	width: 397px;
-	left: 90px;
-	height: 40px;
+	height: 34px;
+	width: 100%;
+	font-family: Avenir-book;
+	padding-left: 10px;
+	padding-right: 10px;
 }
+
+
 #txtRegisterFirstName {
 	width: 193px;
 	top: 110px;
@@ -257,23 +273,26 @@ body {
 	font-size: 14px;
 }
 .reminder {
-	top: 248px;
-	width:125px;
+	width: 30%;
+}
+#txtRemind1 {
+	float:left;
 }
 #txtRemind2 {
-	left: 226px;
+	margin-left:auto; margin-right:auto;
 }
 #txtRemind3 {
-	left: 362px;
+	float:right;
 }
-#btnSchedule {
+.btnSubmitModal {
+	text-align: center;
+	position:relative;
+	margin-left:auto; margin-right:auto;
 	width: 152px;
-	height: 44px;
-	left: 212px;
-	top: 308px;
+	height:45px;
 	font-size: 19px;
-	letter-spacing: 3px;
-	line-height: 48px;	
+	letter-spacing: 4px;
+	line-height: 45px;	
 }
 #txtRegisterEmail {
 	top: 170px;
@@ -285,37 +304,38 @@ body {
 	top: 290px;
 }
 #btnCreateGroup {
+	/*top: 350px;*/
+	position: relative;
+	float:left;
+	left: 30px;
 	width: 193px;
-	top: 350px;
 	line-height: 40px;
 }
 #btnJoinGroup{
+	/*top: 350px;*/
+	position: relative;
+	float:left;
+	left: 64px;
 	width: 193px;
-	top: 350px;
 	line-height: 40px;
-	left: 294px;
 }
-#txtGroup {
+/*#txtGroup {
 	top: 410px;
-}
-#code {
-	position: absolute;
+}*/
+#groupCode {
+	/*position: absolute;
 	font-family: Avenir-book;
 	top: 450px;
 	color: #000;
+	left: 235px;*/
 	text-align: center;
 	font-size: 17px;
-	left: 235px;
+	
 }
-#btnRegister {
-	width: 152px;
-	height: 44px;
-	left: 212px;
-	top: 485px;
-	font-size: 19px;
-	letter-spacing: 3px;
-	line-height: 48px;	
+#groupDrop {
+	margin-top:70px;
 }
+
 #titleName {
 	text-align: center;
   position: relative;
@@ -379,7 +399,22 @@ body {
 	text-align: center;
 	cursor: pointer;
 }
-/*#cntCreateGroup{
+/*
+.register {
+	font-size: 19px;
+	width: 397px;
+	left: 90px;
+	height: 40px;
+}
+#welcome {
+	position:relative;
+	font-family: Avenir-black;
+	top: 25px;
+	color: #000;
+	text-align: center;
+	font-size: 36px;
+}
+#cntCreateGroup{
 	position: absolute;
  	top: 390px;
 	height: 20px;
