@@ -77,9 +77,11 @@
 		<div class="btn btnReverse" id="btnJoinGroup"> Join a group </div>
 
 		<div id="groupDrop" class="formelement" style="display:none">
-			<input type="text" class="formbox" id="txtGroup" placeholder=" ">
-			<div id="groupCode"> a13bawliu23b </div>
-			<div style="width:100%; margin-top:15px;">
+			<div class="formelement">
+				<div id="groupDescription"></div>
+				<input type="text" class="formbox" id="txtGroup" placeholder=" ">
+				<div id="groupDynamic"> </div></div>
+			<div style="width:100%;">
 			  	<div class="btn btnSubmitModal">REGISTER</div>
 			</div>
 
@@ -88,34 +90,6 @@
 			</div>-->
 		</div>
 
-		<!--<div id="welcome">Welcome!</div>
-		<input type="text" class="txt register" id="txtRegisterFirstName" placeholder="First Name">
-		<input type="text" class="txt register" id="txtRegisterLastName" placeholder="Last Name">
-		<input type="text" class="txt register" id="txtRegisterEmail" placeholder="Email">
-		<input type="password" class="txt register" id="txtRegisterPassword" placeholder="Password">
-		<input type="password" class="txt register" id="txtRegisterPassword2" placeholder="Repeat Password">
-		<div class="btn register btnReverse" id="btnCreateGroup"> Create a group </div>
-		<div class="btn register btnReverse" id="btnJoinGroup"> Join a group </div>-->
-
-
-		<!--<div id="btnCreateGroupdrop">
-			<div id="cntCreateGroup"></div>
-			<div class="register" id="dropGroup">
-				<input type="text" class="txt register txtDoGroup" id="txtCreateGroup" placeholder="Name of Group">
-			</div>
-		</div>
-		<div id="btnJoinGroupdrop">
-			<div id="cntJoinGroup"></div>
-			<div class="register" id="dropGroup">
-				<input type="text" class="txt register txtDoGroup" id="txtJoinGroup" placeholder="Code for Group">
-			</div>
-		</div>
-		<div id="groupDrop" style="display:none">
-			<input type="text" class="txt register" id="txtGroup" placeholder=" ">
-			<div id="code"> a13bawliu23b </div>
-			<div class="btn basic" id="btnRegister"> REGISTER </div>
-		</div>
-		<div class="btn basic" id="btnRegister"> REGISTER </div>-->
 	</div>
 
 </body>
@@ -127,16 +101,26 @@
 		$("#btnCreateGroup").removeClass("btn btnReverse").addClass("selected");
 		$("#btnJoinGroup").removeClass("selected").addClass("btn btnReverse");
 		$("#groupDrop").show();
-		$("#txtGroup").attr("placeholder", "Create a group");
-		$("#simplemodal-container").css("height","550px");
+		$("#txtGroup").attr("placeholder", "ex. CCHMC Nephrology Department");
+		$("#groupDescription").html("Enter Group Name");
+		$("#groupDynamic").html("code: 19283746501923");
+		$("#simplemodal-container").css("height","580px");
 	});
 	$("#btnJoinGroup").click(function(){
 		$("#btnJoinGroup").removeClass("btn btnReverse").addClass("selected");
 		$("#btnCreateGroup").removeClass("selected").addClass("btn btnReverse");
 		$("#groupDrop").show();
-		$("#txtGroup").attr("placeholder", "Join a group");
-		$("#simplemodal-container").css("height","550px");
-		/*$("#btnJoinGroup").removeClass("btnReverse").addClass("btn");
+		$("#txtGroup").attr("placeholder", "ex. 19283746501923");
+		$("#groupDescription").html("Enter Group Code (a 15 number code)");
+		$("#groupDynamic").html("CCCHMC Nephrology Department");
+		$("#simplemodal-container").css("height","580px");
+		var top = $("#simplemodal-container").css("top");
+		top = top.substring(0,top.length - 2);
+		top = top - 75;
+		$("#simplemodal-container").css("top",top + "px");
+		/*,($("#simplemodal-container").css("top") - 10) + "px");
+		$("#simplemodal-container").css("top","10%");
+		$("#btnJoinGroup").removeClass("btnReverse").addClass("btn");
 		$("#btnCreateGroup").removeClass("btn").addClass("btnReverse");
 		$("#btnCreateGroupdrop").hide();
 		$("#btnJoinGroupdrop").show();*/

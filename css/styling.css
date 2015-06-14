@@ -322,15 +322,17 @@ body {
 /*#txtGroup {
 	top: 410px;
 }*/
-#groupCode {
+#groupDynamic {
 	/*position: absolute;
 	font-family: Avenir-book;
 	top: 450px;
 	color: #000;
 	left: 235px;*/
 	text-align: center;
+	margin-top:5px;
 	font-size: 17px;
-	
+	font-family: Avenir-Oblique;
+	color: #ddd;
 }
 #groupDrop {
 	margin-top:70px;
