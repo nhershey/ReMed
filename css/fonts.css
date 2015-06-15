@@ -7,6 +7,14 @@
 	font-family: 'Avenir-black';
 	src: url('../Avenir/AvenirLTStd-Black.otf');
 }
+@font-face {
+	font-family: 'Avenir-LightOblique';
+	src: url('../Avenir/AvenirLTStd-LightOblique.otf');
+}
+@font-face {
+	font-family: 'Avenir-Oblique';
+	src: url('../Avenir/AvenirLTStd-Oblique.otf');
+}
 /*
 @font-face {
 	font-family: 'FuturaPTWebMedium';

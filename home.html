@@ -115,7 +115,7 @@ Calendar.prototype.getHTML = function() {
 				<input type="text" placeholder="John" class="formbox"> </div>
 			<div class="formrighthalf formelement">
 				Last Name <br/> 
-				<input type="text" placeholder="John" class="formbox"> </div>
+				<input type="text" placeholder="Smith" class="formbox"> </div>
 		<div class="formelement">
 			Phone Number <br/> 
 			<input type="text" placeholder="jsmith@hospital.org" class="formbox phone"> </div>
@@ -135,6 +135,7 @@ Calendar.prototype.getHTML = function() {
 		<a href="index.html"> <div id="logout"> Logout </div></a>
 		<input type="text" class="txt" id="txtSearch" placeholder="Search by Name">
 
+		<div id="homebody">
 		<div id="tblPatients">
 			<div class="row" id="headerrow">
 				<div class="cell"> First Name </div>
@@ -156,13 +157,16 @@ Calendar.prototype.getHTML = function() {
 						<div class="reminderTimes" id="1"> 7:40pm </div>					
 					</div>
 				</div>
-				<div class="tableDropCol"> 
+				
+				<!--<div class="tableDropCol"> 
 					<div class="lblNoteTitle"> Notes </div>
 
 					<div class="lblNoteText"> 
 					 1) Nicolas seems to forget most often on weekends. <br/><br/>
 					 2) Nicolas could benefit from a 9:10am reminder.</div>
-				</div>
+				</div>-->
+				
+
 				<div class="tableDropCol"> 
 					<script type="text/javascript">
 						var today = new Date();
@@ -193,6 +197,19 @@ Calendar.prototype.getHTML = function() {
 								$("#calendar-div").html(cal.getHTML());
 							}
 						</script>
+				</div>
+
+
+				<!-- THIS IS FOR HISTORY -->
+				<div class="tableDropCol"> 
+					<div class="lblNoteTitle"> History </div>
+
+					<div class="lblNoteText"> 
+					 <div class="historyDate history"> 6/1/15 </div> <div class="historyMessage history"> Dr. Hershey schedules ReMed. </div> <br/>
+					 <div class="historyDate history"> 6/4/15 </div> <div class="historyMessage history"> Dr. Hershey updates reminder times. </div> <br/>
+					 <div class="historyDate history"> 6/8/15 </div> <div class="historyMessage history"> Dr. Hershey updates reminder times. </div> <br/>
+					 <div class="historyDate history"> 6/11/15 </div> <div class="historyMessage history"> Dr. Hershey stops ReMed. </div> <br/>
+					</div>
 				</div>
 
 			</div>
@@ -239,6 +256,24 @@ Calendar.prototype.getHTML = function() {
 					
 			</script>
 		</div>
+		
+<br/><br/>
+		<div id="tblProviders">
+		<div class="row" id="headerrow">
+				<div class="cell"> First Name </div>
+				<div class="cell"> Last Name </div>
+				<div class="cell"> Email </div>
+				<div class="cell"> Number Registered </div>
+			</div>
+			<div class="row color1" id="-1">
+				<div class="cell"> Nicolas </div>
+				<div class="cell"> Hershey </div>
+				<div class="cell"> 1 (513)-545-9227 </div>
+				<div class="cell"> 85% </div>
+			</div>
+			</div>
+		</div>
+		
 
 	</div>
 

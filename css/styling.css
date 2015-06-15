@@ -7,14 +7,14 @@ body {
 	margin-left: auto;
     margin-right: auto;
     width:1000px;
-     
     text-align: center;
 }
-#background {
+
+/*#background {
 	width:1200px;
 	position:relative;
 	left: -80px;
-}
+}*/
 .btn {
 	border-radius: 0px;
 	background: #CD5030; 
@@ -124,6 +124,7 @@ body {
 	width: 858px;
 	left: 65px;
 	top: 133px;
+	margin-bottom: 50px;
 	z-index: -5;
 }
 .header {
@@ -175,7 +176,7 @@ body {
 	color: #CCC;
 	font-size: 18px;
 }
-#tblPatients {
+#homebody {
 	position: absolute;
 	top: 225px;
 	width: 100%;
@@ -195,6 +196,7 @@ body {
 	background-color: #CD5030;
 	font-family: Helvetica;
 	font-weight: bold;
+	cursor: auto;
 }
 .color1 {
 	background-color: #E2E5E9;
@@ -249,6 +251,7 @@ body {
 	font-family: Avenir-book;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-top: 6px;
 }
 .txtreminder {
 	width: 30%;
@@ -290,7 +293,7 @@ body {
 	text-align: center;
 	margin-top:5px;
 	font-size: 17px;
-	font-family: Avenir-Oblique;
+	font-family: Avenir-LightOblique;
 	color: #ddd;
 }
 #groupDrop {
@@ -324,6 +327,8 @@ body {
   width: 275px;
   background: beige;
   line-height: 38px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .lblNoteText {
   background: white;
@@ -331,6 +336,22 @@ body {
   height: 120px;
   padding: 20px;
   text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+.history {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+.historyDate {
+	float: left;
+  	text-align: right;
+  	width: 20%;
+  	padding-right: 9px;
+}
+.historyMessage {
+	float: left;
+	width: 75%;
 }
 .reminderText {
 	position: relative;
@@ -363,6 +384,8 @@ body {
 }
 .calendar-table {
 	background: beige;
+	margin-left: auto;
+ 	margin-right: auto;
 }
 .calendar-arrow {
 	text-align: center;

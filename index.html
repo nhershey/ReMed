@@ -42,7 +42,7 @@
 			2) Your patient receives text reminders to take their medication. <br/><br/><br/>
 			3) You can monitor their adherence and change treatment accordingly.
 		</div>
-		<div class="header" id="icons">
+		<div id="icons">
 			<img id="form" src="img/form.svg" /><br/><br/>
 			<img id="phone" src="img/phone.svg" /><br/><br/>
 			<img id="graph" src="img/graph.svg" />
@@ -52,7 +52,6 @@
 			I can use the results to make more informed decisions."<br/>
 			- Hypertension specialist
 		</div>
-
 	</div>
 	<div id="modal-content">
 		<!--<img src="svg_cheats/sign-up-modal-supported.svg">-->
@@ -63,16 +62,16 @@
 				<input type="text" placeholder="John" class="formbox"> </div>
 			<div class="formrighthalf formelement">
 				Last Name <br/> 
-				<input type="text" placeholder="John" class="formbox"> </div>
+				<input type="text" placeholder="Smith" class="formbox"> </div>
 		<div class="formelement">
 			Email <br/> 
 			<input type="text" placeholder="jsmith@hospital.org" class="formbox"> </div>
 		<div class="formelement">
 			Password <br/> 
-			<input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" class="formbox"> </div>
+			<input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="formbox"> </div>
 		<div class="formelement">
 			Repeat Password <br/> 
-			<input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" class="formbox"> </div>
+			<input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" class="formbox"> </div>
 		<div class="btn btnReverse" id="btnCreateGroup"> Create a group </div>
 		<div class="btn btnReverse" id="btnJoinGroup"> Join a group </div>
 
@@ -90,6 +89,7 @@
 
 </body>
 <script type="text/javascript">
+	var expanded = false;
 	$("#btnCreateGroup").click(function(){
 		$("#btnCreateGroup").removeClass("btn btnReverse").addClass("selected");
 		$("#btnJoinGroup").removeClass("selected").addClass("btn btnReverse");
@@ -98,6 +98,13 @@
 		$("#groupDescription").html("Enter Group Name");
 		$("#groupDynamic").html("code: 19283746501923");
 		$("#simplemodal-container").css("height","580px");
+		if (!expanded) {
+			var top = $("#simplemodal-container").css("top");
+			top = top.substring(0,top.length - 2);
+			top = top - 75;
+			$("#simplemodal-container").css("top",top + "px");
+			expanded = true;
+		}
 	});
 	$("#btnJoinGroup").click(function(){
 		$("#btnJoinGroup").removeClass("btn btnReverse").addClass("selected");
@@ -107,10 +114,13 @@
 		$("#groupDescription").html("Enter Group Code (a 15 number code)");
 		$("#groupDynamic").html("CCCHMC Nephrology Department");
 		$("#simplemodal-container").css("height","580px");
-		var top = $("#simplemodal-container").css("top");
-		top = top.substring(0,top.length - 2);
-		top = top - 75;
-		$("#simplemodal-container").css("top",top + "px");
+		if (!expanded) {
+			var top = $("#simplemodal-container").css("top");
+			top = top.substring(0,top.length - 2);
+			top = top - 75;
+			$("#simplemodal-container").css("top",top + "px");
+			expanded = true;
+		}
 	});
 </script>
 
