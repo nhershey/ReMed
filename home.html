@@ -104,12 +104,15 @@ Calendar.prototype.getHTML = function() {
 
 		<div id="titleName">CCCHMC Hypertension Clinic</div>
   		<div id="titleCode"> code: 1baflj313 </div>
-		<div class="btn basic" id="btnAddPatient"> ADD PATIENT </div>
+  		<div id="navBar"> 
+  			<a class="navItem" href="#tblPatients">Patients</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  			<a class="navItem" href="#tblProviders">Providers</a></div>
+		
 
 		<div id="modal-content">
 			<!--<img src="svg_cheats/sign-up-modal-supported.svg">-->
 			
-		<div class="mdlTitle">Welcome</div>
+		<div class="mdlTitle">Add a Patient</div>
 			<div class="formlefthalf formelement">
 				First Name <br/> 
 				<input type="text" placeholder="John" class="formbox"> </div>
@@ -132,22 +135,26 @@ Calendar.prototype.getHTML = function() {
 			</div>
 		</div>
 
+		
 		<a href="index.html"> <div id="logout"> Logout </div></a>
-		<input type="text" class="txt" id="txtSearch" placeholder="Search by Name">
 
 		<div id="homebody">
 		<div id="tblPatients">
+
+		<input type="text" class="txt" id="txtSearch" placeholder="Search by Name">
+		<div class="btn basic" id="btnAddPatient"> ADD PATIENT </div>
+		<br/><br/><br/>
 			<div class="row" id="headerrow">
-				<div class="cell"> First Name </div>
-				<div class="cell"> Last Name </div>
-				<div class="cell"> Cell Phone </div>
-				<div class="cell"> Adherence </div>
+				<div class="patientCell"> First Name </div>
+				<div class="patientCell"> Last Name </div>
+				<div class="patientCell"> Cell Phone </div>
+				<div class="patientCell"> Adherence </div>
 			</div>
 			<div class="row color1" id="-1">
-				<div class="cell"> Nicolas </div>
-				<div class="cell"> Hershey </div>
-				<div class="cell"> 1 (513)-545-9227 </div>
-				<div class="cell"> 85% </div>
+				<div class="patientCell"> Nicolas </div>
+				<div class="patientCell"> Hershey </div>
+				<div class="patientCell"> 1 (513)-545-9227 </div>
+				<div class="patientCell"> 85% </div>
 			</div> 
 			<div id="row-1" class="tableDrop color1">
 				<div class="tableDropCol">
@@ -215,19 +222,19 @@ Calendar.prototype.getHTML = function() {
 			</div>
 			<script>
 				
-				for (var i = 0; i < 4; i++) { 
+				for (var i = 0; i < 10; i++) { 
 					document.write('<div class="row color2" id="'+(i*2)+'"> \
-						<div class="cell"> First Name </div> \
-						<div class="cell"> Last Name </div>  \
-						<div class="cell"> Cell Phone </div> \
-						<div class="cell"> Adherence </div> \
+						<div class="patientCell"> First Name </div> \
+						<div class="patientCell"> Last Name </div>  \
+						<div class="patientCell"> Cell Phone </div> \
+						<div class="patientCell"> Adherence </div> \
 					</div> \
 					<div id="row'+(i*2)+'"><img id="dropdownpic" src="svg_cheats/open-down2.svg"/></div> \
 					<div class="row color1" id="'+(i*2+1)+'"> \
-						<div class="cell"> First Name </div> \
-						<div class="cell"> Last Name </div>  \
-						<div class="cell"> Cell Phone </div> \
-						<div class="cell"> Adherence </div> \
+						<div class="patientCell"> First Name </div> \
+						<div class="patientCell"> Last Name </div>  \
+						<div class="patientCell"> Cell Phone </div> \
+						<div class="patientCell"> Adherence </div> \
 					</div> \
 					<div id="row'+(i*2+1)+'"><img id="dropdownpic" src="svg_cheats/open-down1.svg"/></div>');
 					$('#row'+(i*2)).hide();
@@ -258,24 +265,49 @@ Calendar.prototype.getHTML = function() {
 		</div>
 		
 <br/><br/>
+
 		<div id="tblProviders">
-		<div class="row" id="headerrow">
-				<div class="cell"> First Name </div>
-				<div class="cell"> Last Name </div>
-				<div class="cell"> Email </div>
-				<div class="cell"> Number Registered </div>
+			<div id="providerTitle">Health Providers in your Group</div>
+			<div class="row" id="headerrow">
+				<div class="providerCell"> First Name </div>
+				<div class="providerCell"> Last Name </div>
+				<div class="providerCell"> Email </div>
+				<div class="providerCell"> Number Registered </div>
 			</div>
-			<div class="row color1" id="-1">
-				<div class="cell"> Nicolas </div>
-				<div class="cell"> Hershey </div>
-				<div class="cell"> 1 (513)-545-9227 </div>
-				<div class="cell"> 85% </div>
-			</div>
-			</div>
+			<script>
+			for (var i = 0; i < 10; i += 2) { 
+				document.write('<div class="row color1" id="tblProvider'+i+'"> \
+				<div class="providerCell" id="tblProviderFirst'+i+'"> Sigmund </div> \
+				<div class="providerCell" id="tblProviderLast'+i+'"> Freud </div> \
+				<div class="providerCell" id="tblProviderEmail'+i+'"> sfreud@cchmc.org </div> \
+				<div class="providerCell" id="tblProviderNumber'+i+'"> 14 patients </div> \
+				<img src="img/delete.svg" class="deleteProvider basic" id="'+i+'"> \
+			</div> \
+			<div class="row color2" id="tblProvider'+(i+1)+'"> \
+				<div class="providerCell" id="tblProviderFirst'+(i+1)+'"> Sigmund </div> \
+				<div class="providerCell" id="tblProviderLast'+(i+1)+'"> Freud </div> \
+				<div class="providerCell" id="tblProviderEmail'+(i+1)+'"> sfreud@cchmc.org </div> \
+				<div class="providerCell" id="tblProviderNumber'+(i+1)+'"> 14 patients </div> \
+				<img src="img/delete.svg" class="deleteProvider basic" id="'+(i+1)+'"> \
+			</div> ');
+			}
+			</script>
+		</div>
+		
+		<br/><br/>
 		</div>
 		
 
 	</div>
+
+<div id="modal-content-deleteProvider" style="display:none">			
+		<div class="mdlTitle">Are you sure?</div>
+		<div class="formelement" id="deleteMessage">
+			Are you sure you'd like to remove <span id="deleteName"> </span> from your group?</div>
+		<div class="btn btnReverse" id="btnCreateGroup"> Cancel </div>
+		<div class="btn btnReverse" id="btnJoinGroup"> Remove </div>
+</div>
+
 
 
 </body>
