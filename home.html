@@ -121,18 +121,45 @@ Calendar.prototype.getHTML = function() {
 				<input type="text" placeholder="Smith" class="formbox"> </div>
 		<div class="formelement">
 			Phone Number <br/> 
-			<input type="text" placeholder="jsmith@hospital.org" class="formbox phone"> </div>
+			<input type="text" placeholder="(123)-456-7890" class="formbox phone"> </div>
 		<div class="formelement">
 			Reminder Times <br/>
-				<div style="width:100%;text-align:center">
-				  	<input type="text" class="formbox txtreminder" id="txtRemind1" placeholder="0:00">
-					<input type="text" class="formbox txtreminder" id="txtRemind2" placeholder="0:00">
-					<input type="text" class="formbox txtreminder" id="txtRemind3" placeholder="0:00">
+				<div class="reminderTimeDiv">
+				  	<div id="txtRemind1" class="reminderBox"> Morning <input type="text" class="formbox txtreminder" placeholder="8:00am"> </div>
+					<div id="txtRemind3" class="reminderBox"> Evening <input type="text" class="formbox txtreminder" placeholder="8:00pm"> </div>
+					<div id="txtRemind2" class="reminderBox"> Afternoon <input type="text" class="formbox txtreminder" placeholder="2:00pm"> </div>
 				</div>
 			</div>
 			<div style="width:100%;">
 			  	<div class="btn btnSubmitModal"> SCHEDULE </div>
 			</div>
+			<script>
+				$( ".txtreminder" ).on("focusin", function() {
+				  $(this).addClass("reminderOn")
+				});
+				$(".txtreminder").on("focusout", function() {
+					if ($(this).val() == "") {
+						$(this).removeClass("reminderOn");
+					}
+				});
+				/*$("#txtRemind1").on("focusout", function () {
+					if ($(this).val() != "") {
+						$("#txtRemind2").addClass("extraReminderOn"); $("#txtRemind2").prop('disabled', false);
+					}
+					else {
+						$("#txtRemind2").val(""); $("#txtRemind2").removeClass("extraReminderOn"); $("#txtRemind2").prop('disabled', true);
+						$("#txtRemind3").val(""); $("#txtRemind3").removeClass("extraReminderOn"); $("#txtRemind3").prop('disabled', true);
+					}
+				});
+				$("#txtRemind2").on("focusout", function () {
+					if ($("#txtRemind1").val() != "" && $(this).val() != "") {
+						$("#txtRemind3").addClass("extraReminderOn"); $("#txtRemind3").prop('disabled', false);
+					}
+					else {
+						$("#txtRemind3").val(""); $("#txtRemind3").removeClass("extraReminderOn"); $("#txtRemind3").prop('disabled', true);
+					}
+				});*/
+			</script>
 		</div>
 
 		
@@ -312,6 +339,7 @@ Calendar.prototype.getHTML = function() {
 
 </body>
 <script>
+
 $(".phone").mask("(999) 999-9999");
 
 </script>

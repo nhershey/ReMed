@@ -254,7 +254,7 @@ body {
 }
 .formelement {
 	text-align: left;
-	font-family: Avenir-book;
+	font-family: Avenir-black;
 	margin-bottom:15px;
 	color: #000;
 }
@@ -275,8 +275,21 @@ body {
 	padding-right: 10px;
 	padding-top: 6px;
 }
-.txtreminder {
+.reminderBox {
 	width: 30%;
+}
+.txtreminder {
+	width: 100%;
+	background-color: #ddd;
+}
+.reminderTimeDiv {
+	width:100%; 
+	text-align:center;
+	margin-top:10px;
+	font-family: Avenir-book;
+}
+.reminderOn {
+	background-color: #fff;
 }
 #txtRemind1 {
 	float:left;
