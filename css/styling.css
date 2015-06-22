@@ -1,3 +1,4 @@
+/* These first two stylings are an attempt to center the page */
 body {
 	width: 100%;
 	text-align: center;
@@ -9,12 +10,7 @@ body {
     width:1000px;
     text-align: center;
 }
-
-/*#background {
-	width:1200px;
-	position:relative;
-	left: -80px;
-}*/
+/* GENERAL: button styling */
 .btn {
 	border-radius: 0px;
 	background: #CD5030; 
@@ -28,14 +24,6 @@ body {
 	color: #CD5030;
 	background: #FFF; 
 }
-.selected {
-	border-radius: 0px;
-	background: #CD5030; 
-	color: #FFFFFF;
-	position: absolute;
-	font-family: Avenir-book;
-	cursor: pointer;
-}
 .btnReverse{
 	box-shadow: inset 0px 0px 0px 2px #CD5030;
 	background: #FFF;
@@ -46,26 +34,25 @@ body {
 	background: #CD5030; 
 	color: #FFFFFF;
 }
-#btnLogin {
-	width: 109px;
-	height: 36px;
-	right: 0px;
-	top: 52px;
-	font-size: 15px;
-	letter-spacing: 2.5px;
-	line-height: 37px;
+.selected {
+	border-radius: 0px;
+	background: #CD5030; 
+	color: #FFFFFF;
+	position: absolute;
+	font-family: Avenir-book;
+	cursor: pointer;
 }
-#btnAddPatient {
-	position: relative;
-  width: 190px;
-  height: 44px;
-  right: 0px;
-  font-size: 19px;
-  letter-spacing: 3px;
-  line-height: 48px;
-  float: right;
-
+/* GENERAL: textbox styling */
+.txt {
+	position: absolute;
+	background: #FFFFFF;
+	border: 1px solid #C9B9B9;
+	border-radius: 0px;
+	font-family: Avenir-book;
+	font-size: 19px;
+	padding: 10px;
 }
+/* INDEX PAGE: Button placement */
 #btnVideo {
 	width: 152px;
 	height: 44px;
@@ -85,48 +72,16 @@ body {
 	letter-spacing: 3px;
 	line-height: 48px;
 }
-.txt {
-	position: absolute;
-	background: #FFFFFF;
-	border: 1px solid #C9B9B9;
-	border-radius: 0px;
-	font-family: Avenir-book;
-	font-size: 19px;
-	padding: 10px;
-}
-#txtEmail {
-	width: 154px;
+#btnLogin {
+	width: 109px;
 	height: 36px;
-	right: 285px;
+	right: 0px;
 	top: 52px;
+	font-size: 15px;
+	letter-spacing: 2.5px;
+	line-height: 37px;
 }
-#txtPassword {
-	width: 154px;
-	height: 36px;
-	right: 120px;
-	top: 52px;
-}
-#txtSearch {
-	  width: 456px;
-  height: 44px;
-  position: relative;
-  float: left;
-}
-#logo {
-	position: absolute;
-	width: 233px;
-	/*left: 50px;*/
-	left: 0px;
-	top: 30px;
-}
-#stethoscope {
-	position: absolute;
-	width: 858px;
-	left: 65px;
-	top: 133px;
-	margin-bottom: 50px;
-	z-index: -5;
-}
+/* INDEX PAGE: Text placement */
 .header {
 	position: absolute;
 	width: 100%;
@@ -164,29 +119,65 @@ body {
 	width: 500px;
 	font-size: 24px;
 }
-#icons {
-	position: absolute;
-	text-align: left;
-	top: 1068px;
-	left: 723px;
-}
 #quote {
 	font-family: Avenir-book;
 	top: 1435px;
 	color: #CCC;
 	font-size: 18px;
 }
+/* INDEX PAGE: Miscellaneous item placement */
+#logo {
+	position: absolute;
+	width: 233px;
+	left: 0px;
+	top: 30px;
+}
+#stethoscope {
+	position: absolute;
+	width: 858px;
+	left: 65px;
+	top: 133px;
+	margin-bottom: 50px;
+	z-index: -5;
+}
+#icons {
+	position: absolute;
+	text-align: left;
+	top: 1068px;
+	left: 723px;
+}
+/* INDEX PAGE: textbox placement */
+#txtEmail {
+	width: 154px;
+	height: 36px;
+	right: 285px;
+	top: 52px;
+}
+#txtPassword {
+	width: 154px;
+	height: 36px;
+	right: 120px;
+	top: 52px;
+}
+/* HOME PAGE */
 #homebody {
 	position: relative;
 	top: 70px;
 	width: 100%;
 	font-family:Helvetica-light;
 }
+#btnAddPatient {
+	position: relative;
+  width: 190px;
+  height: 44px;
+  right: 0px;
+  font-size: 19px;
+  letter-spacing: 3px;
+  line-height: 48px;
+  float: right;
+
+}
 .row {
-	/*height: 18px;
-	padding: 8px;
-	font-family: Helvetica-light;
-	text-align: left;*/
 	padding-top: 7px;
 	text-align: left;
 	padding-bottom: 26px;
@@ -199,6 +190,24 @@ body {
 	font-weight: bold;
 	cursor: auto;
 }
+#txtSearch {
+	  width: 456px;
+  height: 44px;
+  position: relative;
+  float: left;
+}
+#navBar {
+	padding-top:5px;
+	text-align: center;
+  	font-family: Avenir-book;
+  	top: 44px;
+  	position: relative;
+}
+.navItem {
+	text-decoration: underline;
+	cursor: pointer;
+}
+/* HOME PAGE: the colors of the rows */
 .color1 {
 	background-color: #E2E5E9;
 }
@@ -211,7 +220,7 @@ body {
 	text-align: center;
 }
 .providerCell {
-	width: 24%;
+	width: 25%;
 	float: left;
 	text-align: center;
 	cursor: auto;
@@ -242,122 +251,7 @@ body {
 #dropdownpic {
 	width: 100%;
 }
-
-/*Register Modal*/
-.mdlTitle {
-	font-family: Avenir-black;
-	font-size: 36px;
-	color: #000;
-	margin-bottom:15px;
-}
-.formelement {
-	text-align: left;
-	font-family: Avenir-black;
-	margin-bottom:15px;
-	color: #000;
-}
-.formlefthalf {
-	width: 47%;
-	float:left;
-}
-.formrighthalf {
-	width:47%;
-	float:right;
-}
-.formbox {
-	font-size: 19px;
-	height: 34px;
-	width: 100%;
-	font-family: Avenir-book;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 6px;
-}
-.reminderBox {
-	width: 30%;
-}
-.txtreminder {
-	width: 100%;
-	background-color: #ddd;
-}
-.reminderTimeDiv {
-	width:100%; 
-	text-align:center;
-	margin-top:10px;
-	font-family: Avenir-book;
-}
-.reminderOn {
-	background-color: #fff;
-}
-#txtRemind1 {
-	float:left;
-}
-#txtRemind2 {
-	margin-left:auto; margin-right:auto;
-}
-#txtRemind3 {
-	float:right;
-}
-.btnSubmitModal {
-	text-align: center;
-	position:relative;
-	margin-left:auto; margin-right:auto;
-	width: 152px;
-	height:45px;
-	font-size: 19px;
-	letter-spacing: 4px;
-	line-height: 45px;	
-}
-#btnCreateGroup {
-	position: relative;
-	float:left;
-	left: 30px;
-	width: 193px;
-	line-height: 40px;
-}
-#btnJoinGroup{
-	position: relative;
-	float:left;
-	left: 64px;
-	width: 193px;
-	line-height: 40px;
-}
-#groupDynamic {
-	text-align: center;
-	margin-top:5px;
-	font-size: 17px;
-	font-family: Avenir-LightOblique;
-	color: #ddd;
-}
-#groupDrop {
-	margin-top:70px;
-}
-#titleName {
-	text-align: center;
-  position: relative;
-  top: 40px;
-  left: 20px;
-  font-family: Avenir-black;
-  font-size: 24px;
-}
-#titleCode {
-	text-align: center;
-  	font-family: Avenir-LightOblique;
-  	color: #bbb;
-  	top: 44px;
-  	position: relative;
-}
-#navBar {
-	padding-top:5px;
-	text-align: center;
-  	font-family: Avenir-book;
-  	top: 44px;
-  	position: relative;
-}
-.navItem {
-	text-decoration: underline;
-	cursor: pointer;
-}
+/* HOME PAGE: Drop column styling */
 .tableDropCol {
 	width: 30%;
 	height: 90%;
@@ -415,6 +309,7 @@ body {
   	font-family: Helvetica-Light;
   	text-align: center;
 }
+/* HOME PAGE: mini calendar */
 .calendar-day {
 	  width: 34px;
   text-align: center;
@@ -436,59 +331,115 @@ body {
 	text-align: center;
 	cursor: pointer;
 }
-/*
-.register {
-	font-size: 19px;
-	width: 397px;
-	left: 90px;
-	height: 40px;
-}
-#welcome {
-	position:relative;
+/* MODAL: general styling */
+.formelement {
+	text-align: left;
 	font-family: Avenir-black;
-	top: 25px;
+	margin-bottom:15px;
 	color: #000;
-	text-align: center;
+}
+.formlefthalf {
+	width: 47%;
+	float:left;
+}
+.formrighthalf {
+	width:47%;
+	float:right;
+}
+.formbox {
+	font-size: 19px;
+	height: 34px;
+	width: 100%;
+	font-family: Avenir-book;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 6px;
+}
+.mdlTitle {
+	font-family: Avenir-black;
 	font-size: 36px;
+	color: #000;
+	margin-bottom:15px;
 }
-#cntCreateGroup{
-	position: absolute;
- 	top: 390px;
-	height: 20px;
-	width: 20px;
-	background: #CD5030;
-	left: 177px; 
+.btnSubmitModal {
+	text-align: center;
+	position:relative;
+	margin-left:auto; margin-right:auto;
+	width: 152px;
+	height:45px;
+	font-size: 19px;
+	letter-spacing: 4px;
+	line-height: 45px;	
+	margin-top: 20px;
 }
-#cntJoinGroup{
-	position: absolute;
- 	top: 390px;
-	height: 20px;
-	width: 20px;
-	background: #CD5030;
-	left: 380px; 
+/* MODAL-SIGNUP: group creation styling */
+#btnCreateGroup {
+	position: relative;
+	float:left;
+	left: 30px;
+	width: 193px;
+	line-height: 40px;
 }
-#btnCreateGroupdrop{
-	display:none;
+#btnJoinGroup{
+	position: relative;
+	float:left;
+	left: 64px;
+	width: 193px;
+	line-height: 40px;
 }
-#btnJoinGroupdrop{
-	display:none;
+#groupDynamic {
+	text-align: center;
+	margin-top:5px;
+	font-size: 17px;
+	font-family: Avenir-LightOblique;
+	color: #ddd;
 }
-#dropGroup{
-	top: 410px;
-	height: 80px;
-	background: #CD5030; 
-	position: absolute;
+#groupDrop {
+	margin-top:70px;
 }
-#txtJoinGroup {
-	top:20px;
-	left:20px;
-	width: 360px;
+#titleName {
+	text-align: center;
+  position: relative;
+  top: 40px;
+  left: 20px;
+  font-family: Avenir-black;
+  font-size: 24px;
 }
-.txtDoGroup {
-	left: 20px;
-  	top: 20px;
-  	width: 360px;
-}*/
+#titleCode {
+	text-align: center;
+  	font-family: Avenir-LightOblique;
+  	color: #bbb;
+  	top: 44px;
+  	position: relative;
+}
+
+/* MODAL-ADD: reminder styling */
+.reminderBox {
+	width: 30%;
+}
+.txtreminder {
+	width: 100%;
+	background-color: #ddd;
+}
+.reminderTimeDiv {
+	width:100%; 
+	text-align:center;
+	margin-top:10px;
+	font-family: Avenir-book;
+}
+.reminderOn {
+	background-color: #fff;
+}
+#txtRemind1 {
+	float:left;
+}
+#txtRemind2 {
+	margin-left:auto; margin-right:auto;
+}
+#txtRemind3 {
+	float:right;
+}
+
 
 
 

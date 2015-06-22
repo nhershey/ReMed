@@ -33,7 +33,7 @@ jQuery(function ($) {
 			$('#modal-content').modal();
 		}
 		if ($(this).attr('id') == "btnAddPatient") {
-			$("#simplemodal-container").css("height","370px");
+			$("#simplemodal-container").css("height","400px");
 		}
 		return false;
 	});
