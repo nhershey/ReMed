@@ -221,15 +221,13 @@ body {
   font-size: 24px;
   margin-bottom: 5px;
 }
-.deleteProvider {
-	float: right;
-  width: 2%;
-  padding-right: 10px;
-  cursor: pointer;
-}
+
 #deleteName {
 	font-family: Avenir-black;
 	text-decoration: underline;
+}
+#deleteMessage { 
+	font-family: Avenir;
 }
 #logout {
 	position: absolute;

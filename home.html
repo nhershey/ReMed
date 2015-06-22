@@ -302,29 +302,27 @@ Calendar.prototype.getHTML = function() {
 				<div class="providerCell"> Manage </div>
 			</div>
 			<div class="row">
-				<div class="providerCell"> B.F. </div>
-				<div class="providerCell"> Skinner </div>
-				<div class="providerCell"> skinner@gmail.com </div>
+				<div class="providerCell" id="tblProviderFirst-1">B.F.</div>
+				<div class="providerCell" id="tblProviderLast-1">Skinner</div>
+				<div class="providerCell" id="tblProviderEmail-1">skinner@gmail.com</div>
 				<div class="providerCell"> 
-					<span class="navItem">Accept</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  					<span class="navItem">Deny</a>
+					<span class="navItem basic manageProvider acceptProvider" id="-1">Accept</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  					<span class="navItem basic manageProvider denyProvider" id="-1">Deny</a>
 				</div>
 			</div>
 			<script>
 			for (var i = 0; i < 10; i += 2) { 
 				document.write('<div class="row color1" id="tblProvider'+i+'"> \
-				<div class="providerCell" id="tblProviderFirst'+i+'"> Sigmund </div> \
-				<div class="providerCell" id="tblProviderLast'+i+'"> Freud </div> \
-				<div class="providerCell" id="tblProviderEmail'+i+'"> sfreud@cchmc.org </div> \
-				<div class="providerCell" id="tblProviderNumber'+i+'"> 14 patients </div> \
-				<img src="img/delete.svg" class="deleteProvider basic" id="'+i+'"> \
+				<div class="providerCell" id="tblProviderFirst'+i+'">Sigmund</div> \
+				<div class="providerCell" id="tblProviderLast'+i+'">Freud</div> \
+				<div class="providerCell" id="tblProviderEmail'+i+'">sfreud@cchmc.org</div> \
+				<div class="providerCell navItem basic manageProvider deleteProvider" id="'+i+'">Remove</div> \
 			</div> \
 			<div class="row color2" id="tblProvider'+(i+1)+'"> \
-				<div class="providerCell" id="tblProviderFirst'+(i+1)+'"> Sigmund </div> \
-				<div class="providerCell" id="tblProviderLast'+(i+1)+'"> Freud </div> \
-				<div class="providerCell" id="tblProviderEmail'+(i+1)+'"> sfreud@cchmc.org </div> \
-				<div class="providerCell" id="tblProviderNumber'+(i+1)+'"> 14 patients </div> \
-				<img src="img/delete.svg" class="deleteProvider basic" id="'+(i+1)+'"> \
+				<div class="providerCell" id="tblProviderFirst'+(i+1)+'">Nick</div> \
+				<div class="providerCell" id="tblProviderLast'+(i+1)+'">Hershman</div> \
+				<div class="providerCell" id="tblProviderEmail'+(i+1)+'">sfreud@cchmc.org</div> \
+				<div class="providerCell navItem basic manageProvider deleteProvider" id="'+(i+1)+'">Remove</div> \
 			</div> ');
 			}
 			</script>
@@ -339,7 +337,7 @@ Calendar.prototype.getHTML = function() {
 <div id="modal-content-deleteProvider" style="display:none">			
 		<div class="mdlTitle">Are you sure?</div>
 		<div class="formelement" id="deleteMessage">
-			Are you sure you'd like to remove <span id="deleteName"> </span> from your group?</div>
+			Are you sure you'd like to <span id="deleteCommand">remove</span> <span id="deleteName"></span> from your group?</div>
 		<div class="btn btnReverse" id="btnCreateGroup"> Cancel </div>
 		<div class="btn btnReverse" id="btnJoinGroup"> Remove </div>
 </div>

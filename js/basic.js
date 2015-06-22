@@ -15,13 +15,19 @@ jQuery(function ($) {
 
 	// Load dialog on click
 	$('.basic').click(function (e) {
-		if ($(this).hasClass('deleteProvider')) {
-			$('#modal-content-deleteProvider').modal();
+		if ($(this).hasClass("manageProvider")) {
+			$("#modal-content-deleteProvider").modal();
 			$("#simplemodal-container").css("height","200px");
 			var id = $(this).attr('id');
 			var first = $("#tblProviderFirst"+id).html()
 			var last = $("#tblProviderLast"+id).html()
 			$("#deleteName").html(first + " " + last);
+			if ($(this).hasClass("deleteProvider"))
+				$("#deleteCommand").html("remove");
+			if ($(this).hasClass("denyProvider"))
+				$("#deleteCommand").html("deny");
+			if ($(this).hasClass("acceptProvider"))
+				$("#deleteCommand").html("accept");
 		}
 		else {
 			$('#modal-content').modal();
