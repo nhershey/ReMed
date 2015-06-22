@@ -54,6 +54,7 @@ Calendar.prototype.generateHTML = function(){
   html += '<tr><td class="calendar-arrow" onclick="changeMonth(-1)"><</td><td colspan="5" class="calendar-month">';
   html +=  monthName + "&nbsp;" + this.year;
   html += '</td><td class="calendar-arrow" onclick="changeMonth(1)">></td></tr>';
+  //this makes a header row with day abbreviations so I took it out to save space
   /*html += '<tr class="calendar-header">';
   for(var i = 0; i <= 6; i++ ){
     html += '<td class="calendar-header-day">';
@@ -99,7 +100,6 @@ Calendar.prototype.getHTML = function() {
 <body>
 
 	<div id="centered">
-		<!--<img id="background" src="Home Background.svg" />-->
 		<img id="logo" src="img/logo.svg" />
 
 		<div id="titleName">CCCHMC Hypertension Clinic</div>
@@ -107,65 +107,12 @@ Calendar.prototype.getHTML = function() {
   		<div id="navBar"> 
   			<a class="navItem" href="#tblPatients">Patients</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   			<a class="navItem" href="#tblProviders">Providers (1)</a></div>
-		
 
-		<div id="modal-content">
-			<!--<img src="svg_cheats/sign-up-modal-supported.svg">-->
-			
-		<div class="mdlTitle">Add a Patient</div>
-			<div class="formlefthalf formelement">
-				First Name <br/> 
-				<input type="text" placeholder="John" class="formbox"> </div>
-			<div class="formrighthalf formelement">
-				Last Name <br/> 
-				<input type="text" placeholder="Smith" class="formbox"> </div>
-		<div class="formelement">
-			Phone Number <br/> 
-			<input type="text" placeholder="(123)-456-7890" class="formbox phone"> </div>
-		<div class="formelement">
-			Reminder Times <br/>
-				<div class="reminderTimeDiv">
-				  	<div id="txtRemind1" class="reminderBox"> Morning <input type="text" class="formbox txtreminder" placeholder="8:00am"> </div>
-					<div id="txtRemind3" class="reminderBox"> Evening <input type="text" class="formbox txtreminder" placeholder="8:00pm"> </div>
-					<div id="txtRemind2" class="reminderBox"> Afternoon <input type="text" class="formbox txtreminder" placeholder="2:00pm"> </div>
-				</div>
-			</div>
-			<div style="width:100%;">
-			  	<div class="btn btnSubmitModal"> SCHEDULE </div>
-			</div>
-			<script>
-				$( ".txtreminder" ).on("focusin", function() {
-				  $(this).addClass("reminderOn")
-				});
-				$(".txtreminder").on("focusout", function() {
-					if ($(this).val() == "") {
-						$(this).removeClass("reminderOn");
-					}
-				});
-				/*$("#txtRemind1").on("focusout", function () {
-					if ($(this).val() != "") {
-						$("#txtRemind2").addClass("extraReminderOn"); $("#txtRemind2").prop('disabled', false);
-					}
-					else {
-						$("#txtRemind2").val(""); $("#txtRemind2").removeClass("extraReminderOn"); $("#txtRemind2").prop('disabled', true);
-						$("#txtRemind3").val(""); $("#txtRemind3").removeClass("extraReminderOn"); $("#txtRemind3").prop('disabled', true);
-					}
-				});
-				$("#txtRemind2").on("focusout", function () {
-					if ($("#txtRemind1").val() != "" && $(this).val() != "") {
-						$("#txtRemind3").addClass("extraReminderOn"); $("#txtRemind3").prop('disabled', false);
-					}
-					else {
-						$("#txtRemind3").val(""); $("#txtRemind3").removeClass("extraReminderOn"); $("#txtRemind3").prop('disabled', true);
-					}
-				});*/
-			</script>
-		</div>
-
-		
 		<a href="index.html"> <div id="logout"> Logout </div></a>
 
 		<div id="homebody">
+
+		<!-- Patient table, feel free to mess around with row colors -->
 		<div id="tblPatients">
 
 		<input type="text" class="txt" id="txtSearch" placeholder="Search by Name">
@@ -184,23 +131,16 @@ Calendar.prototype.getHTML = function() {
 				<div class="patientCell"> 85% </div>
 			</div> 
 			<div id="row-1" class="tableDrop color1">
+				<!-- TEXT ON THE LEFT -->
 				<div class="tableDropCol">
 					 <div class="reminderText"> "Don't forget to take your Medication!" </div>
 					<div class="reminderTimesContainer"> 
 						<div class="reminderTimes" id="0"> 9:00am </div>
-						<div class="reminderTimes" id="1"> 7:40pm </div>					
+						<div class="reminderTimes" id="1"> 7:40pm </div>	
 					</div>
 				</div>
 				
-				<!--<div class="tableDropCol"> 
-					<div class="lblNoteTitle"> Notes </div>
-
-					<div class="lblNoteText"> 
-					 1) Nicolas seems to forget most often on weekends. <br/><br/>
-					 2) Nicolas could benefit from a 9:10am reminder.</div>
-				</div>-->
-				
-
+				<!-- CALENDAR NOTE -->
 				<div class="tableDropCol"> 
 					<script type="text/javascript">
 						var today = new Date();
@@ -234,7 +174,7 @@ Calendar.prototype.getHTML = function() {
 				</div>
 
 
-				<!-- THIS IS FOR HISTORY -->
+				<!-- HISTORY NOTE -->
 				<div class="tableDropCol"> 
 					<div class="lblNoteTitle"> History </div>
 
@@ -247,6 +187,8 @@ Calendar.prototype.getHTML = function() {
 				</div>
 
 			</div>
+
+			<!-- Bunch of generated columns -->
 			<script>
 				
 				for (var i = 0; i < 10; i++) { 
@@ -268,40 +210,21 @@ Calendar.prototype.getHTML = function() {
 					$('#row'+(i*2+1)).hide();
 				}
 				$('#row-1').hide();
-				$(".row").click(function(){
-				   	$("#row"+$(this).attr('id')).slideToggle();
-				});
-				var opened = [false,false,false];
-				$(".reminderTimes").click(function(){
-					if (!opened[$(this).attr('id')]) {
-						opened[$(this).attr('id')] = true;
-						var time = $(this).html();
-						$(this).html("<input type='text' id='reminderTimesOpen"+$(this).attr('id')+"' class='reminderTimesOpen' value='"+time+"''>");
-					}	
-				});
-				$(".reminderTimes").on( "focusout", function(){
-					if (opened[$(this).attr('id')]) {
-						opened[$(this).attr('id')] = false;
-						var time = $("#reminderTimesOpen"+$(this).attr('id')).val();
-						$(this).html(time);
-					}	
-				});
-
-					
 			</script>
 		</div>
 		
 <br/><br/>
-
+<!-- table for all providers in your group. 
+The first row would be providers you have yet to approve. Feel free to style this row. -->
 		<div id="tblProviders">
 			<div id="providerTitle">Health Providers in your Group</div>
-			<div class="row" id="headerrow">
+			<div class="row providerRow" id="headerrow">
 				<div class="providerCell"> First Name </div>
 				<div class="providerCell"> Last Name </div>
 				<div class="providerCell"> Email </div>
 				<div class="providerCell"> Manage </div>
 			</div>
-			<div class="row">
+			<div class="row providerRow">
 				<div class="providerCell" id="tblProviderFirst-1">B.F.</div>
 				<div class="providerCell" id="tblProviderLast-1">Skinner</div>
 				<div class="providerCell" id="tblProviderEmail-1">skinner@gmail.com</div>
@@ -312,13 +235,13 @@ Calendar.prototype.getHTML = function() {
 			</div>
 			<script>
 			for (var i = 0; i < 10; i += 2) { 
-				document.write('<div class="row color1" id="tblProvider'+i+'"> \
+				document.write('<div class="row color1 providerRow" id="tblProvider'+i+'"> \
 				<div class="providerCell" id="tblProviderFirst'+i+'">Sigmund</div> \
 				<div class="providerCell" id="tblProviderLast'+i+'">Freud</div> \
 				<div class="providerCell" id="tblProviderEmail'+i+'">sfreud@cchmc.org</div> \
 				<div class="providerCell navItem basic manageProvider deleteProvider" id="'+i+'">Remove</div> \
 			</div> \
-			<div class="row color2" id="tblProvider'+(i+1)+'"> \
+			<div class="row color2 providerRow" id="tblProvider'+(i+1)+'"> \
 				<div class="providerCell" id="tblProviderFirst'+(i+1)+'">Nick</div> \
 				<div class="providerCell" id="tblProviderLast'+(i+1)+'">Hershman</div> \
 				<div class="providerCell" id="tblProviderEmail'+(i+1)+'">sfreud@cchmc.org</div> \
@@ -334,7 +257,42 @@ Calendar.prototype.getHTML = function() {
 
 	</div>
 
-<div id="modal-content-deleteProvider" style="display:none">			
+<!-- add patient modal -->
+<div id="modal-content-addPatient">
+		<div class="mdlTitle">Add a Patient</div>
+			<div class="formlefthalf formelement">
+				First Name <br/> 
+				<input type="text" placeholder="John" class="formbox"> </div>
+			<div class="formrighthalf formelement">
+				Last Name <br/> 
+				<input type="text" placeholder="Smith" class="formbox"> </div>
+		<div class="formelement">
+			Phone Number <br/> 
+			<input type="text" placeholder="(123)-456-7890" class="formbox phone"> </div>
+		<div class="formelement">
+			Reminder Times <br/>
+				<div class="reminderTimeDiv">
+				  	<div id="txtRemind1" class="reminderBox"> Morning <input type="text" class="formbox txtreminder" placeholder="8:00am"> </div>
+					<div id="txtRemind3" class="reminderBox"> Evening <input type="text" class="formbox txtreminder" placeholder="8:00pm"> </div>
+					<div id="txtRemind2" class="reminderBox"> Afternoon <input type="text" class="formbox txtreminder" placeholder="2:00pm"> </div>
+				</div>
+			</div>
+			<div style="width:100%;">
+			  	<div class="btn btnSubmitModal"> SCHEDULE </div>
+			</div>
+			<script>
+				$( ".txtreminder" ).on("focusin", function() {
+				  $(this).addClass("reminderOn")
+				});
+				$(".txtreminder").on("focusout", function() {
+					if ($(this).val() == "") {
+						$(this).removeClass("reminderOn");
+					}
+				});
+	</script>
+</div>
+<!-- manage provider modal -->
+<div id="modal-content-manageProvider" style="display:none">			
 		<div class="mdlTitle">Are you sure?</div>
 		<div class="formelement" id="deleteMessage">
 			Are you sure you'd like to <span id="deleteCommand">remove</span> <span id="deleteName"></span> from your group?</div>
@@ -342,12 +300,29 @@ Calendar.prototype.getHTML = function() {
 		<div class="btn btnReverse" id="btnJoinGroup"> Remove </div>
 </div>
 
-
-
 </body>
 <script>
-
-$(".phone").mask("(999) 999-9999");
+	//This makes the number entry mask to the format given. For some reason, it only works at the bottom of the page
+	$(".phone").mask("(999) 999-9999");
+	//This allows the patient info to drop down
+	$(".row").click(function(){
+		$("#row"+$(this).attr('id')).slideToggle();
+	});
+	var opened = [false,false,false];
+	$(".reminderTimes").click(function(){
+		if (!opened[$(this).attr('id')]) {
+			opened[$(this).attr('id')] = true;
+			var time = $(this).html();
+			$(this).html("<input type='text' id='reminderTimesOpen"+$(this).attr('id')+"' class='reminderTimesOpen' value='"+time+"''>");
+		}	
+	});
+	$(".reminderTimes").on( "focusout", function(){
+		if (opened[$(this).attr('id')]) {
+			opened[$(this).attr('id')] = false;
+			var time = $("#reminderTimesOpen"+$(this).attr('id')).val();
+			$(this).html(time);
+		}	
+	});
 
 </script>
 </html>

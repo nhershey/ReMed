@@ -214,15 +214,17 @@ body {
 .color2 {
 	background-color: #FEE8C3;
 }
-.patientCell {
+.patientCell { /* I made these two different things in case we ever need to change them later */
 	width: 25%;
 	float:left;
 	text-align: center;
 }
-.providerCell {
+.providerCell { /* I made these two different things in case we ever need to change them later */
 	width: 25%;
 	float: left;
 	text-align: center;
+}
+.providerRow {
 	cursor: auto;
 }
 #providerTitle {

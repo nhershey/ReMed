@@ -16,7 +16,7 @@ jQuery(function ($) {
 	// Load dialog on click
 	$('.basic').click(function (e) {
 		if ($(this).hasClass("manageProvider")) {
-			$("#modal-content-deleteProvider").modal();
+			$("#modal-content-manageProvider").modal();
 			$("#simplemodal-container").css("height","200px");
 			var id = $(this).attr('id');
 			var first = $("#tblProviderFirst"+id).html()
@@ -29,12 +29,14 @@ jQuery(function ($) {
 			if ($(this).hasClass("acceptProvider"))
 				$("#deleteCommand").html("accept");
 		}
+		else if ($(this).attr('id') == "btnAddPatient") {
+			$('#modal-content-addPatient').modal();
+			$("#simplemodal-container").css("height","400px");
+		}	
 		else {
 			$('#modal-content').modal();
 		}
-		if ($(this).attr('id') == "btnAddPatient") {
-			$("#simplemodal-container").css("height","400px");
-		}
+		
 		return false;
 	});
 });
