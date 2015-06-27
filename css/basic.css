@@ -11,6 +11,12 @@
 #modal-content {
 	display:none;
 }
+#modal-content-addPatient {
+	display: none;
+}
+#modal-content-manageProvider {
+	display: none;
+}
 
 /* Overlay */
 #simplemodal-overlay {background-color:#000;}

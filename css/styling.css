@@ -48,7 +48,7 @@ body {
 	background: #FFFFFF;
 	border: 1px solid #C9B9B9;
 	border-radius: 0px;
-	font-family: Avenir-book;
+	font-family: Helvetica-Light;
 	font-size: 19px;
 	padding: 10px;
 }
@@ -113,7 +113,7 @@ body {
 #steps {
 	text-align: left;
 	font-family: Avenir-book;
-	top: 1071px;
+	top: 1100px;
 	color: #000;
 	left: 200px;
 	width: 500px;
@@ -290,20 +290,44 @@ body {
   	width: 20%;
   	padding-right: 9px;
 }
+.stopReminders {
+    top: 15px;
+    font-size: 12px;
+  padding: 5px;
+  background: #E4B92A;
+  letter-spacing: 2px;
+  width: 140px;
+  cursor: pointer;
+  margin: auto;
+  position: relative;
+}
+.deleteRecord {
+	  top: 35px;
+  float: right;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  position: relative;
+}
+
 .historyMessage {
 	float: left;
 	width: 75%;
 }
 .reminderText {
 	position: relative;
-	top: 40px;
+	top: 5px;
 }
 .reminderTimesContainer {
 	position: relative;
-	top: 65px;
+	top: 15px;
 }
 .reminderTimes {
-	margin:10px;
+  font-family: Helvetica-Light;
+  width: 96px;
+  font-size: 16px;
+  margin-bottom: 9px;
+  padding-left: 10px;
 }
 .reminderTimesOpen{
 	width: 96px;
@@ -349,13 +373,13 @@ body {
 	float:right;
 }
 .formbox {
-	font-size: 19px;
+	font-size: 18px;
 	height: 34px;
 	width: 100%;
-	font-family: Avenir-book;
+	font-family: Helvetica-Light;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 6px;
+	padding-top: 3px;
 }
 .mdlTitle {
 	font-family: Avenir-black;

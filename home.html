@@ -102,7 +102,7 @@ Calendar.prototype.getHTML = function() {
 	<div id="centered">
 		<img id="logo" src="img/logo.svg" />
 
-		<div id="titleName">CCCHMC Hypertension Clinic</div>
+		<div id="titleName">CCHMC Hypertension Clinic</div>
   		<div id="titleCode"> code: 1baflj313 </div>
   		<div id="navBar"> 
   			<a class="navItem" href="#tblPatients">Patients</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -133,11 +133,16 @@ Calendar.prototype.getHTML = function() {
 			<div id="row-1" class="tableDrop color1">
 				<!-- TEXT ON THE LEFT -->
 				<div class="tableDropCol">
-					 <div class="reminderText"> "Don't forget to take your Medication!" </div>
+					<div class="reminderText"> "Don't forget to take your Medication!" </div>
 					<div class="reminderTimesContainer"> 
-						<div class="reminderTimes" id="0"> 9:00am </div>
-						<div class="reminderTimes" id="1"> 7:40pm </div>	
+						<input type="text" class="reminderTimes" value="8:00am  &#10004;"><br/>
+						<input type="text" class="reminderTimes" value="8:00am  &#10004;"><br/>
+						<input type="text" class="reminderTimes" value="8:00am  &#10004;"><br/><!--<div class="reminderTimes" id="0"> 9:00am </div>
+						<div class="reminderTimes" id="1"> 7:40pm </div>
+						<div class="reminderTimes" id="2"> 7:40pm </div>	-->
 					</div>
+					<div class="stopReminders"> STOP REMINDERS</div>
+					<div class="deleteRecord"> Delete Record </div>
 				</div>
 				
 				<!-- CALENDAR NOTE -->
@@ -312,15 +317,16 @@ The first row would be providers you have yet to approve. Feel free to style thi
 	$(".reminderTimes").click(function(){
 		if (!opened[$(this).attr('id')]) {
 			opened[$(this).attr('id')] = true;
-			var time = $(this).html();
-			$(this).html("<input type='text' id='reminderTimesOpen"+$(this).attr('id')+"' class='reminderTimesOpen' value='"+time+"''>");
+			var newtext = $(this).val().substring(0, $(this).val().length - 3); 
+			$(this).val(newtext);
 		}	
 	});
 	$(".reminderTimes").on( "focusout", function(){
 		if (opened[$(this).attr('id')]) {
 			opened[$(this).attr('id')] = false;
-			var time = $("#reminderTimesOpen"+$(this).attr('id')).val();
-			$(this).html(time);
+			var newtext = $(this).val();
+			newtext = newtext + "  &#10004;";
+			$(this).val(newtext);
 		}	
 	});
 
