@@ -31,7 +31,7 @@ jQuery(function ($) {
 		}
 		else if ($(this).attr('id') == "btnAddPatient") {
 			$('#modal-content-addPatient').modal();
-			$("#simplemodal-container").css("height","400px");
+			$("#simplemodal-container").css("height","405px");
 		}	
 		else {
 			$('#modal-content').modal();
